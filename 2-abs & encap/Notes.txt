@@ -1,11 +1,6 @@
 
 
-OO in java
------------
-
- - class & object
-
- - abstraction & encapsulation
+ abstraction & encapsulation
 
 
         how to implement in java ?
@@ -17,4 +12,32 @@ OO in java
         ==> using accessor methods ( set & get )
         ==> using class & interface(s)
         ==> using proper design patterns
+
+
+-------------------------------------------------
+==> using class & interface(s)
+-------------------------------------------------
+
+
+ e.g
+ 
+ 
+    wheel : rotate()
+    
+    car   : move()
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
 
