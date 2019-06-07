@@ -1,0 +1,40 @@
+
+----------------------------------------
+
+why java ?
+
+- can develope any type of application
+
+----------------------------------------
+
+features:
+
+    -> OOP + FP
+    -> static typed
+
+    -> portable to any platform
+    -> concurrent & parallel appln
+
+---------------------------------------- 
+
+How to run java-program ?
+
+    - using JRE
+
+-----------------------------------------
+Java Environment
+-----------------------------------------
+
+dev
+    - JDK 
+dep
+    - JRE
+
+-----------------------------------------
+
+"HelloWorld"
+
+-----------------------------------------
+
+
+

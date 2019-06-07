@@ -1,0 +1,295 @@
+
+
+//----------------------------------------
+1. project
+//----------------------------------------
+
+
+proj
+|
+|----- p1 ( .java / .class )
+|
+|----- p2
+|   |
+|   |----- p21
+|
+| -- resources
+
+
+
+//----------------------------------------
+2. Java File
+//----------------------------------------
+
+PublicType.java
+--------------------------
+| // package declaration ( 1 )
+|
+| // import statements ( n )
+|
+| // public Type ( class | interface | enum | annotation ) ( 1 )
+|
+| // default Types ( n )
+|--------------------------
+
+
+
+//----------------------------------------
+3. package declaration 
+//----------------------------------------
+
+why we need packages ?
+
+    => to organize code well
+    => to avoid type-name collisions
+
+
+   syntax:
+
+    package root;
+    package root.sub1;
+    package root.sub1.sub2;
+
+    recommended guideline for package declaration
+
+     e.g
+
+     Employee.java ==> emp ==> EM ==> wissen ==> com 
+
+     package c-type.c-name.p-name.m-name;
+     i.e
+     package com.wissen.em.emp;
+
+
+
+
+//----------------------------------------
+4. import statements
+//----------------------------------------
+
+
+e.g
+
+
+    proj
+    |
+    |--- p1 ( A.java, B.java )
+    |
+    |--- p2 ( C.java, D.java )
+    |  |
+    |  |--- p21 ( E.java )
+    |
+    |
+    |--- p3 ( C.java )
+
+
+    package p1;
+    
+    import p2.C; // opton-2
+    import p2.D;
+    // or
+    import p2.*;
+    import p2..p21.*;
+    import p3.*;
+    public class A{
+        B b;
+        p2.C c1; // option-1
+        p3.C c2; // option-1
+        D d;
+    }
+
+
+//----------------------------------------
+ object & class
+//----------------------------------------
+
+what is object ?
+
+    => info,data,attr,prop   ===> State
+    => func,method,work,oprn ===> Behavior
+    => loc,addr,reference    ===> Identity
+    
+    obj ==> sbi
+
+what is class ?
+
+    ==> blueprint/description ( S & B ) of similar objects
+
+
+i.e class ---> instance(s) 
+
+
+//----------------------------------------
+OO concepts
+//----------------------------------------
+
+1. Abstraction / Interface / Front-End 
+   
+    why we need ?
+        ==> easy to use/learn by dependent
+        ==> for loose-coupling b/w dependent & dependency
+
+2. Encapsulation / Implementation / Back-End
+
+    why we need ?
+        ==> to hide complex impln of dependency
+
+ 3. Inheritance
+
+    why we need ?
+        ==> re-using/inherting common state/behav 
+            from generalized-type to specialized type's instances  
+
+ 4. Polymorphism
+
+    why we need?
+        ==> on different strategy ( input/envi ) , 
+            object able to do same behav in different way
+
+
+
+//----------------------------------------
+5. interface Type
+//----------------------------------------
+
+_______ interface Name [extends] Interface1,Interface2{
+[public]     // state ==> public static final i.e constants
+[      ]     // behavior ==> public abstract
+        }
+
+
+//----------------------------------------
+6. class Type
+//----------------------------------------
+
+
+________ __________ class Name [extends] SuperClass {
+[public][abstract]             [implements] Interface1,Interface2
+[      ][final ]    // state ==> variables
+        [strictfp]  // constructor(s)
+                    // behavios ==> methods
+                    // code blocks
+                    // nested Types
+---------------------                    
+[public] [static]
+[private]
+[protected]
+[         ]
+}
+
+
+//----------------------------------------
+6. enum Type  from JDK 1.5
+//----------------------------------------
+
+why we need?
+
+ ==> to group related constants with Type
+
+ _______ enum Name [extends] SuperClass 
+ [public]            [implements] Interface1,Interface2{
+ [      ]    MALE,FEMALE;
+                // variables
+                // constructor
+                // methods
+            }
+            
+
+//----------------------------------------
+7. Annontation Type  from JDK 1.5
+//----------------------------------------
+
+
+________ @interface Name{
+[public]     // properties
+}
+
+
+//----------------------------------------
+8. Variables / data
+//----------------------------------------
+
+types of data
+
+    -> simple / primitives ==> values
+    -> complex / reference ==> objects
+
+    e.g
+
+    class Employee{
+       final static String COMP_NAME="WISSEN";
+       static String tnrName;
+       public void m(){
+           int loc;
+       }
+    }
+
+
+
+   _________  _______ data-type varName=[value / obj's reference];
+   [public]   [static]
+   [private]  [final ]
+   [protected][trasient]
+   [         ][volatile]
+
+    local variables
+   ---------------------
+    -Nil-      [final] only 
+
+
+
+//----------------------------------------
+9. behavior / method
+//----------------------------------------
+
+ReturnType
+
+    - void
+    - primitive type
+    - reference type
+
+_______     _________ ReturnType methodName([args])[throws] CheckedException{
+[public]    [static]        // ARL & assigment oprns
+[private]   [final]         // conditional statements
+[protected] [synchronized]  // Looping statements
+[          ][strictfp]      // invoking other behavior
+            [abstract]       [return ] [result]
+            [native]
+                          }
+
+
+
+//----------------------------------------
+10. constructor
+//----------------------------------------
+
+in java , objectct creations is 2 step process
+
+step-1 : dynamic memory allocation   ==> 'new'
+step-2 : intialize with object's default/actual data  ==> 'constructor'
+
+
+new Constructor();  ==> object
+
+syntax:
+
+    _________ ClassName([args])[throws] CheckedException{
+    [public]            // intialization logic to current object ( this )
+    [private]          
+    [protected]
+    [         ]
+
+               }
+
+
+ -----------------------------------------------------
+    Java Naming conventions
+ ----------------------------------------------------- 
+
+
+ keywords ==> lower-case
+ package-names ==> lower-case       
+ type names    ==> pascal-case , A______B_____C_____
+ var/method names ==> camel-case , ______B______C_____
+ constants        ==> upper-case      
+
