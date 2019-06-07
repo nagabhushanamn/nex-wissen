@@ -89,7 +89,7 @@ e.g
     import p2.D;
     // or
     import p2.*;
-    import p2..p21.*;
+    import p2.p21.*;
     import p3.*;
     public class A{
         B b;
