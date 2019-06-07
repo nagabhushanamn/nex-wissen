@@ -167,7 +167,7 @@ ________ __________ class Name [extends] SuperClass {
 [public][abstract]             [implements] Interface1,Interface2
 [      ][final ]    // state ==> variables
         [strictfp]  // constructor(s)
-                    // behavios ==> methods
+                    // behavior ==> methods
                     // code blocks
                     // nested Types
 ---------------------                    
