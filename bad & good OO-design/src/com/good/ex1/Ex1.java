@@ -94,6 +94,7 @@ public class Ex1 {
 
 		NexwaveProxy nexwaveProxy = new NexwaveProxy();
 		nexwaveProxy.learningService();
+		
 
 	}
 
