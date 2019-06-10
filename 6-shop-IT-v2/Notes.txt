@@ -1,0 +1,9 @@
+
+
+PriceMatrix
+
+	- getPrice(item)
+	
+BillingImpl
+	
+	- getTotalPrice(cart)	
