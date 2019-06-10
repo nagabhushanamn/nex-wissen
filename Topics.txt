@@ -1,8 +1,24 @@
 
-
+---------------------------------
 OO in java
------------
+---------------------------------
 
- - class & object
+---------------------------------
+OO concepts
+---------------------------------
+- class & object
+- Abstraction
+- Encapsulation
+- Inheritance
+- polymorphism
 
- - abstraction & encapsulation
+---------------------------------
+ OO principles
+---------------------------------
+- Single Responsibility
+- Open Closed
+- Liskov Substitution
+- Interface Segration
+- Dependency Inversion
+
+

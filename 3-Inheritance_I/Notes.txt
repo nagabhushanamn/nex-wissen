@@ -1,0 +1,52 @@
+
+3. Inheritance
+
+why we need ?
+        ==> re-using/inherting common state/behav 
+            from generalized-type to specialized type's instances  
+
+            
+            
+-------------------------------------------------------------------
+
+
+e.g
+
+
+  proj
+  
+  	p1
+  	
+  		A.java
+  		B.java extends A.java
+  		C.java
+  	p2
+  	
+  		D.java extends A.java
+  		E.java
+
+
+------------------------------------------------------------------- 
+					same-package              |  other-package
+-------------------------------------------------------------------  
+			same-type | sub-type | other-type |  sub-type | other-type
+-------------------------------------------------------------------   
+
+private        Y           N           N            N            N
+(     )        Y           Y           Y            N            N
+protected      Y           Y           Y            Y            N 
+public         Y           Y           Y            Y            Y
+
+--------------------------------------------------------------------- 
+
+
+
+
+
+
+
+
+
+
+
+         
