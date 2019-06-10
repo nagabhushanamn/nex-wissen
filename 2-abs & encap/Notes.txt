@@ -27,8 +27,15 @@
     car   : move()
     
     
+ ------------------------------------------	
 
 
+  recommended type hierarchy for java modules
+  
+  
+  top-level    : Abstraction / Interface
+  middle-level : partial abstraction / Abstract class
+  bottom-level : Encapsulation / Implementation
 
 
 

@@ -6,15 +6,3 @@ OO in java
  - class & object
 
  - abstraction & encapsulation
-
-
-        how to implement in java ?
-
-        many ways
-
-        ==> using access specifiers
-        ==> using packages
-        ==> using accessor methods ( set & get )
-        ==> using class & interface(s)
-        ==> using proper design patterns
-
