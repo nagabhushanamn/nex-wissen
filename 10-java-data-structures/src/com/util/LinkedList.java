@@ -1,15 +1,21 @@
 package com.util;
 
-public class LinkedList<E> {
+import java.util.Iterator;
 
-	private Node<E> head = null;
+public class LinkedList<E> implements Iterable<E> {
+
+	private Node head = null;
 
 	public void add(E e) {
-		Node<E> newNode = new Node<E>(e);
+		Node newNode = new Node(e);
 		if (head == null) {
 			head = newNode;
 		} else {
-			// ..
+			Node last = head;
+			while (last.getNext() != null) {
+				last = last.getNext();
+			}
+			last.setNext(newNode);
 		}
 	}
 
@@ -38,12 +44,52 @@ public class LinkedList<E> {
 
 	}
 
-	public void iterator() {
+	public Iterator<E> iterator() {
 		// ..
+//		// way-1 : Named Local Inner class
+//		class IteratorImpl implements Iterator<E> {
+//			Node temp = head;
+//
+//			@Override
+//			public boolean hasNext() {
+//				if (temp != null)
+//					return true;
+//				else
+//					return false;
+//			}
+//
+//			@Override
+//			public E next() {
+//				E e = temp.getData();
+//				temp = temp.getNext();
+//				return e;
+//			}
+//
+//		}
+//		return new IteratorImpl();
 
+		// way-2 : Anonymous Local Inner class
+		return new Iterator<E>() {
+			Node temp = head;
+
+			@Override
+			public boolean hasNext() {
+				if (temp != null)
+					return true;
+				else
+					return false;
+			}
+
+			@Override
+			public E next() {
+				E e = temp.getData();
+				temp = temp.getNext();
+				return e;
+			}
+		};
 	}
 
-	private class Node<E> {
+	private class Node {
 		private E data;
 		private Node next;
 
