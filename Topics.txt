@@ -22,10 +22,12 @@ OO concepts
  OO patterns
 ---------------------------------
 
-
+       - proxy
+       - observer
 
 
 ---------------------------------
 
-How to handle exceptions in java ?
+- How to handle exceptions in java ?
 
+- Generic types
