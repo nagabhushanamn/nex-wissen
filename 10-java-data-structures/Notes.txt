@@ -1,0 +1,31 @@
+
+
+
+data structures & algorithms
+----------------------------
+
+ 
+ ==> way to organize memory to do CRUDSS operations
+ 
+ 
+ ----------------------------------------------------
+ 
+ types
+ --------
+ 
+ 	- primitives
+ 	- secondary
+ 	
+ 		- linear
+ 		
+ 			- linkedlist
+ 					add(ele)
+ 					add(idx,ele)
+ 					get(idx)
+ 					set(idx,newEle)
+ 					remove(idx)
+ 					remove(ele)
+ 					iterator()
+ 					reverse()
+ 			
+ 	-------------------------------------------------		
