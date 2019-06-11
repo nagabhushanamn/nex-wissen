@@ -1,4 +1,4 @@
-package com.good.ex1;
+package com.good;
 
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;

@@ -1,0 +1,54 @@
+
+
+
+exceptions
+----------
+
+
+  un-expected program flow disturb
+  
+  
+  reasons for exceptions:
+  
+  --> invalid input
+  --> IO problems
+  --> SQL constraints voilation
+  --> n/w problems
+  --> any condition fail.
+  ......
+  
+  what happen if exception happen?
+ 		--> by default , runtime terminate current process
+  soln :
+  		--> handle every exception for normal execution 
+  		
+  how ?
+  		--> by having proper exception handling code		
+  
+  
+  Advantages of Exceptions in java
+  
+  	-> Advantage 1: Separating Error-Handling Code from "Regular" Code
+  	-> Advantage 2: Propagating Errors Up the Call Stack
+  	-> Advantage 3: Grouping and Differentiating Error Types
+  
+  
+  
+  ------------------------------------
+  
+  
+  Throwable
+	  
+	  Exception
+	  
+	  	RuntimeException
+	  
+	  Error
+  
+  
+  ------------------------------------
+  
+  
+  
+  
+  
