@@ -1,0 +1,115 @@
+
+
+
+
+Predicate<Product> byPrice = new Predicate<Product>() {
+								@Override
+								public boolean test(Product t) {
+									return t.getPrice() >= minPrice && t.getPrice() <= maxPrice;
+								}
+							};
+							
+							
+					|
+					|
+					|
+					|
+					|
+					V
+					
+
+Predicate<Product> byPrice = public boolean test(Product t) {
+									return t.getPrice() >= minPrice && t.getPrice() <= maxPrice;
+								}
+							
+				
+							
+					|
+					|
+					|
+					|
+					|
+					V		
+					
+						
+
+Predicate<Product> byPrice =  boolean test(Product t) {
+									return t.getPrice() >= minPrice && t.getPrice() <= maxPrice;
+								}
+							
+							
+							
+					|
+					|
+					|
+					|
+					|
+					V		
+					
+						
+
+Predicate<Product> byPrice =   test(Product t) {
+									return t.getPrice() >= minPrice && t.getPrice() <= maxPrice;
+								}
+							
+							
+							
+										
+							
+					|
+					|
+					|
+					|
+					|
+					V		
+					
+						
+
+Predicate<Product> byPrice =   (Product t) {
+									return t.getPrice() >= minPrice && t.getPrice() <= maxPrice;
+								}
+								
+								
+								
+										
+					|
+					|
+					|
+					|
+					|
+					V		
+					
+					
+------------------------------------------------------					
+// from java -8 , ==> function ( Lambda Expression )						
+------------------------------------------------------
+
+Predicate<Product> byPrice =   (Product t) -> {
+									return t.getPrice() >= minPrice && t.getPrice() <= maxPrice;
+								}
+						
+						
+					-or-
+						
+						
+Predicate<Product> byPrice =   (t) -> {
+									return t.getPrice() >= minPrice && t.getPrice() <= maxPrice;
+								}
+							
+								
+					-or-
+						
+						
+Predicate<Product> byPrice =   t -> {
+									return t.getPrice() >= minPrice && t.getPrice() <= maxPrice;
+								}			
+							
+						
+								
+					-or-
+						
+						
+Predicate<Product> byPrice =   t ->  t.getPrice() >= minPrice && t.getPrice() <= maxPrice;
+												
+							
+							
