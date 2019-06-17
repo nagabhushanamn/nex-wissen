@@ -35,11 +35,12 @@ class Container {
 @Retention(RetentionPolicy.RUNTIME)
 @interface RequestMapping {
 	String url();
+	String method() default "GET";
 }
 
 // server | frramework ( e.g spring )
 class Container {
-	public void processRequest(String url) {
+	public void processRequest(String url,String user,String password) {
 		// complete infra logic about how to handle http-request
 		try {
 
@@ -56,7 +57,7 @@ class Container {
 				if(rm!=null) {
 					String givenUrl=rm.url();
 					if(url.equals(givenUrl)) {
-						method.invoke(instance1, new Object[] {});
+						method.invoke(instance1, new Object[] {user,password});
 					}
 				}
 			}
@@ -80,11 +81,12 @@ class Container {
 //--------------------------------------------
 //developer's code 
 //--------------------------------------------
+//@RequestMapping("/users")
 class UserController {
 	// url: /users/register
-	@RequestMapping(url = "/users/register")
-	public void doRegister() {
-		System.out.println("UserController :: doRegister()");
+	@RequestMapping(url = "/users/register",method="POST")
+	public void doRegister(String user,String password) {
+		System.out.println("UserController :: doRegister() "+user+"\t"+password);
 	}
 
 	// url: /users/login | signin
@@ -114,13 +116,13 @@ public class Anno_Ex2 {
 		Container container = new Container();
 
 		TimeUnit.SECONDS.sleep(2);
-		container.processRequest("/users/register");
+		container.processRequest("/users/register","user","shhhh");
 
-		TimeUnit.SECONDS.sleep(2);
-		container.processRequest("/users/login");
-		
-		TimeUnit.SECONDS.sleep(2);
-		container.processRequest("/users/txr");
+//		TimeUnit.SECONDS.sleep(2);
+//		container.processRequest("/users/login",null,null);
+//		
+//		TimeUnit.SECONDS.sleep(2);
+//		container.processRequest("/users/txr",null,null);
 
 	}
 
