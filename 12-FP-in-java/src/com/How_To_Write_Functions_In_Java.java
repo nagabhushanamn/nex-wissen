@@ -22,7 +22,7 @@ import com.model.Product;
  *      (p1,p2)  -> {expression(s)}
  *       
  * 	
- */       
+ */
 
 // e.g
 @FunctionalInterface
@@ -34,10 +34,12 @@ public class How_To_Write_Functions_In_Java {
 
 	public static void main(String[] args) {
 
+		// E.g-1
 		Predicate<Product> predicate = (t) -> t.getPrice() == 1000.00;
 		boolean b = predicate.test(new Product(111, "Item", 1000.00));
 		System.out.println(b);
 
+		// E.g-2
 //		StringToIntMapper mapper = (String s) -> {
 //			// ..
 //			return s.length();
@@ -53,6 +55,7 @@ public class How_To_Write_Functions_In_Java {
 //			return s.length();
 //		};
 		// or
+		
 		StringToIntMapper mapper = s -> s.length();
 
 	}

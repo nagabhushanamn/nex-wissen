@@ -2,6 +2,7 @@ package com;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Q1 {
 
@@ -25,6 +26,14 @@ public class Q1 {
 				vegMenu.add(item);
 		}
 		System.out.println(vegMenu);
+		
+		
+		// or
+		
+		vegMenu=menu
+				.stream()
+				.filter(t->t.equals("veg"))
+				.collect(Collectors.toList());
 
 	}
 
