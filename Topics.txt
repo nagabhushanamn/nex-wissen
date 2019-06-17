@@ -24,7 +24,7 @@ OO concepts
 
        - proxy
        - observer
-
+       - iterator
 
 ---------------------------------
 
