@@ -16,7 +16,6 @@ import java.util.function.Predicate;
  * 
  */
 
-
 /*
  * 
  *  Higher-Order_Programming  i.e Function composition
@@ -26,7 +25,6 @@ import java.util.function.Predicate;
  *  ==> by composing small function(s), we can build complex algorithms
  * 
  */
-
 
 /*
  * 
@@ -49,7 +47,8 @@ public class FP_Principles {
 		Predicate<Integer> predicate1 = i -> i > 50;
 		Predicate<Integer> predicate2 = i -> i < 100;
 
-		Predicate<Integer> predicate = and(predicate1, predicate2);
+		// Predicate<Integer> predicate = and(predicate1, predicate2);
+		Predicate<Integer> predicate = predicate1.and(predicate2);
 
 		boolean b = predicate.test(60);
 		System.out.println(b);
