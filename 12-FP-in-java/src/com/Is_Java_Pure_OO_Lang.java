@@ -4,6 +4,8 @@ class Box<E> {
 
 }
 
+// Ans : No , because its still support primitives
+
 public class Is_Java_Pure_OO_Lang {
 
 	public static void main(String[] args) {
