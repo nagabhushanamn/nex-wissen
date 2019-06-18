@@ -1,6 +1,27 @@
 
 
+---------------------------------------------------------------
 
+why FP ?
+
+	==> declarative coding style ( always separate 'What' ( your app ) logic from 'How' ( Lib ) logic 
+	==> clean & concise code
+	==> higher-order-programming
+	==> Lazy computations
+	
+	
+---------------------------------------------------------------	
+
+
+
+How to define function in java ?
+
+
+ ==> with any 'functional-interface' type & using Lambda syntax
+
+
+
+e.g
 
 Predicate<Product> byPrice = new Predicate<Product>() {
 								@Override
@@ -8,8 +29,6 @@ Predicate<Product> byPrice = new Predicate<Product>() {
 									return t.getPrice() >= minPrice && t.getPrice() <= maxPrice;
 								}
 							};
-							
-							
 					|
 					|
 					|
@@ -17,45 +36,28 @@ Predicate<Product> byPrice = new Predicate<Product>() {
 					|
 					V
 					
-
 Predicate<Product> byPrice = public boolean test(Product t) {
 									return t.getPrice() >= minPrice && t.getPrice() <= maxPrice;
 								}
-							
-				
-							
 					|
 					|
 					|
 					|
 					|
 					V		
-					
-						
-
 Predicate<Product> byPrice =  boolean test(Product t) {
 									return t.getPrice() >= minPrice && t.getPrice() <= maxPrice;
 								}
-							
-							
-							
 					|
 					|
 					|
 					|
 					|
 					V		
-					
-						
 
 Predicate<Product> byPrice =   test(Product t) {
 									return t.getPrice() >= minPrice && t.getPrice() <= maxPrice;
 								}
-							
-							
-							
-										
-							
 					|
 					|
 					|
@@ -63,15 +65,9 @@ Predicate<Product> byPrice =   test(Product t) {
 					|
 					V		
 					
-						
-
 Predicate<Product> byPrice =   (Product t) {
 									return t.getPrice() >= minPrice && t.getPrice() <= maxPrice;
 								}
-								
-								
-								
-										
 					|
 					|
 					|
@@ -81,33 +77,24 @@ Predicate<Product> byPrice =   (Product t) {
 					
 					
 ------------------------------------------------------					
-// from java -8 , ==> function ( Lambda Expression )						
+from java-8, below syntax is valif function syntax					
 ------------------------------------------------------
 
 Predicate<Product> byPrice =   (Product t) -> {
 									return t.getPrice() >= minPrice && t.getPrice() <= maxPrice;
 								}
-						
-						
 					-or-
-						
 						
 Predicate<Product> byPrice =   (t) -> {
 									return t.getPrice() >= minPrice && t.getPrice() <= maxPrice;
 								}
-							
-								
 					-or-
-						
 						
 Predicate<Product> byPrice =   t -> {
 									return t.getPrice() >= minPrice && t.getPrice() <= maxPrice;
 								}			
-							
-						
 								
 					-or-
-						
 						
 Predicate<Product> byPrice =   t ->  t.getPrice() >= minPrice && t.getPrice() <= maxPrice;
 												
