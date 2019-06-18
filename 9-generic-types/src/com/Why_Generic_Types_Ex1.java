@@ -9,6 +9,7 @@ class Js {
 }
 
 class Trainer {
+
 	private Object subject;
 
 	public Object getSubject() {

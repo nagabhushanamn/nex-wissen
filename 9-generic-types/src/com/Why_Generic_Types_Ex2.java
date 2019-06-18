@@ -2,13 +2,16 @@ package com;
 
 // From JDK 1.5
 
-class NewJava {
+interface Subject {
 }
 
-class NewJs {
+class NewJava implements Subject {
 }
 
-class NewTrainer<T> {
+class NewJs implements Subject {
+}
+
+class NewTrainer<T extends Subject> {
 
 	private T subject;
 
@@ -42,6 +45,8 @@ public class Why_Generic_Types_Ex2 {
 		NewJava newJava = javaTrainer.getSubject();
 		System.out.println("All is well in class room");
 		// ----------------------------------
+
+		NewTrainer<NewJava	> newTrainer = new NewTrainer<>();
 
 	}
 
