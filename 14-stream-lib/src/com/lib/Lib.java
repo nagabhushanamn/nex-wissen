@@ -6,7 +6,7 @@ import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
 
-public class Lib {
+public class Lib<R> {
 
 	public static <T> List<T> filter(List<T> inp, Predicate<T> predicate) {
 		List<T> out = new ArrayList<>();

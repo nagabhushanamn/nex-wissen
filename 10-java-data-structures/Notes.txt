@@ -5,7 +5,7 @@ data structures & algorithms
 ----------------------------
 
  
- ==> way to organize memory to do CRUDSS operations
+ ==> way to organize memory to do 'CRUDSS' operations
  
  
  ----------------------------------------------------
@@ -28,4 +28,117 @@ data structures & algorithms
  					iterator()
  					reverse()
  			
- 	-------------------------------------------------		
+ 	-------------------------------------------------	
+ 	
+ 	collection(s)
+ 	
+ 		java.util.*
+ 		
+ 		
+ 	
+ 	
+ 	types
+ 	--------------------------------------------------------
+ 	
+ 		1. list
+ 		
+ 			--> linear/ordered
+ 			--> index based  
+ 			--> can hold duplicate 	data-elements
+ 			
+ 		2.	set
+ 		
+ 			--> no index
+ 			--> unique elements
+ 			
+ 		3. map
+ 		
+ 			--> data-element + key ( user identity )
+ 			
+---------------------------------------------------------	
+ 	
+ 	
+ 	Collection's Types Hirarchy
+ 	-----------------------------
+ 
+ A. Iterable	
+ 	
+	 I. Collection	
+	 	
+	 	1. List
+	 	
+	 		- Vector      ==> dynamic-array    &  thread-safe / synchronized
+	 			- Stack  extends Vector      	
+	 		- ArrayList   ==> dynamic-array       non-thread-safe
+	 		- LinkedList  ==> double-linked-list
+	 		
+	 		
+	    2. Set
+	    
+	    	- TreeSet       ==> tree          // natural-order/sorted
+	    	- HashSet       ==> hash-table	  // un-ordered	
+	 		- LinkedHashSet ==> DLL + hash-table // ordered
+	 		
+	 	3. Queue
+	 	
+	 		- LinkedList
+	 		- PriorityQueue
+	 		- Dequeue
+ 	
+ 	
+ B. Map		
+ 	
+    	- TreeMap       ==> tree             // natural-order/sorted
+    	- HashMap       ==> hash-table	     // un-ordered	
+ 		- LinkedHashMap ==> DLL + hash-table // ordered
+ 		- Hashtable     ==> hash-table       &  thread-safe / synchronized
+ 		- Properties    ==> hash-table   i.e key=>string + value=>string
+ 		
+ 		   	
+ 			
+---------------------------------------------------------
+
+
+https://docs.oracle.com/javase/tutorial/collections/intro/index.html
+
+
+ 				
+ 	
+ ---------------------------------------------------------	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 		

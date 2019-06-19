@@ -37,7 +37,6 @@ public class Ex4 {
 //		fileLogger.accept("started...");
 
 		// way-1
-
 //		BiFunction<Consumer<String>, Consumer<String>, Consumer<String>> compose = (f1, f2) -> {
 //			return log -> {
 //				f1.accept(log);

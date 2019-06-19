@@ -1,6 +1,7 @@
 package com;
 
 import java.util.Iterator;
+import java.util.Properties;
 
 import com.util.LinkedList;
 
@@ -8,6 +9,7 @@ public class Ex1 {
 
 	public static void main(String[] args) {
 
+		
 		LinkedList<String> linkedList = new LinkedList<>();
 		// ...
 
@@ -33,9 +35,9 @@ public class Ex1 {
 //		}
 
 		// way-3 : for-each loop
-		for (String e : linkedList) {
-			System.out.println(e);
-		}
+//		for (String e : linkedList) {
+//			System.out.println(e);
+//		}Ï
 
 	}
 
