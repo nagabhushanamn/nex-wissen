@@ -5,21 +5,21 @@ import java.util.List;
 
 import com.lib.Lib;
 import com.model.Product;
+import com.model.ProductType;
 
-public class App1 {
+public class Ex1 {
 
 	public static void main(String[] args) {
 
 		//
-		List<Product> products = Arrays.asList(
-				new Product(123121, "item-1", 1000.00),
-				new Product(123127, "item-7", 7000.00),
-				new Product(123123, "item-3", 3000.00),
-				new Product(123122, "item-2", 2000.00),
-				new Product(123125, "item-5", 5000.00),
-				new Product(123126, "item-6", 6000.00),
-				new Product(123124, "item-4", 4000.00)
-		);
+		List<Product> products = Arrays.asList(new Product(123121, "item-1", 1000.00, ProductType.TV),
+				new Product(123127, "item-7", 7000.00, ProductType.MOBILE),
+				new Product(123123, "item-3", 3000.00, ProductType.MOBILE),
+				new Product(123122, "item-2", 2000.00, ProductType.TV),
+				new Product(123125, "item-5", 5000.00, ProductType.MOBILE),
+				new Product(123126, "item-6", 6000.00, ProductType.MOBILE),
+				new Product(123124, "item-4", 4000.00, ProductType.TV));
+
 		
 		//---------------------------------------------
 		
@@ -30,8 +30,9 @@ public class App1 {
 		
 		// or 
 		
+		//--------------------------------------------------
 		// function -chaining / pipeline pattern
-		// ---------------------------------------------------
+		//--------------------------------------------------
 		System.out.println();
 		
 		products

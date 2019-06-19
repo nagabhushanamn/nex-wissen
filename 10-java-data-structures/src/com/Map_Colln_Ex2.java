@@ -73,25 +73,31 @@ public class Map_Colln_Ex2 {
 		Car car2 = new Car("benz-toy", "red");
 
 		// --------------------------------------------
-		Map<Owner, Car> map = new HashMap<>();
-		map.put(owner1, car1);
-		map.put(owner2, car2);
+		Map<Owner, Car> map1 = new HashMap<>();
+		map1.put(owner1, car1);
+		map1.put(owner2, car2);
+
+//		Map<Owner, Car> map2 = new HashMap<>();
+//		map2.put(owner1, car1);
+//		map2.put(owner2, car2);
+//
+//		System.out.println(map1.equals(map2));
 		// --------------------------------------------
 
-		Scanner scanner = new Scanner(System.in);
-		System.out.println("Enter owner name?");
-
-		String name = scanner.nextLine();
-		Owner owner = new Owner(name); // 35
-
-		Car car = map.get(owner);
-		if (car != null) {
-			System.out.println(car);
-		} else {
-			System.out.println("You don't have car");
-		}
-
-		scanner.close();
+//		Scanner scanner = new Scanner(System.in);
+//		System.out.println("Enter owner name?");
+//
+//		String name = scanner.nextLine();
+//		Owner owner = new Owner(name); // 35
+//
+//		Car car = map1.get(owner);
+//		if (car != null) {
+//			System.out.println(car);
+//		} else {
+//			System.out.println("You don't have car");
+//		}
+//
+//		scanner.close();
 
 	}
 
