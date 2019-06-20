@@ -1,0 +1,24 @@
+
+
+
+data/model/entity
+----------------------------------
+
+ - Todo
+ 	-id
+ 	-title
+ 	-completed
+ 	-date
+
+ - User
+ 	-username
+ 	-name
+
+ 	 	
+service / business layer
+-----------------------------------
+
+
+- TodoService
+
+	- use-case(s)  	 	
