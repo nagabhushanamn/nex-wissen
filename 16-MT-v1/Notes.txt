@@ -1,0 +1,47 @@
+
+
+  process
+  ---------
+  
+  	=> one whole/separate execution in OS
+  	=> own's private memory
+  	
+  thread
+  -------
+  
+  	=> light-weight process
+  	=> threads within process , will share same memory	
+  	
+  	
+  	------------------------------------------------------
+  	
+  	How to create new/multiple threads in java-appln ?
+  	
+  	
+  	 using 'java.lang.Thread' class
+  	 
+  	 
+  	 basic-steps:
+  	 -------------
+  	 
+  	 1. create instance of 'java.lang.Thread' class
+  	 2. assign Runnable object/function/ to thread
+  	 3. start thread  ( allocate new 'stack' memory )
+  	 
+  	 -----------------------------------------------------
+  	
+  	
+  		
+  	
+  	
+  	
+  	
+  	
+  	
+  	
+  	
+  	
+  	
+  	
+  	
+  	
