@@ -7,6 +7,9 @@ public class Product {
 	private double price;
 	private ProductType type;
 
+	public Product() {
+	}
+
 	public Product(String name, double price, ProductType type) {
 		super();
 		this.name = name;
