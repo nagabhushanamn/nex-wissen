@@ -1,0 +1,81 @@
+
+
+
+
+s/w
+------------------------------------
+
+	application   +  data-source
+	
+	
+		application  ==> processing logic
+		data-source  ==> persisting logic
+	
+	
+		data-source(s)
+		
+			- file
+			- relational/table/SQL 
+			- No-SQL ( document , key-value , graph .. )
+			.....
+
+-----------------------------------------------------			
+		
+		Application  	
+			--> object model
+		SQL-data-source
+			--> relational model
+			
+--------------------------------------------------------
+
+  ORM ( Object Relation Mapping ) 
+
+    how to do ORM in java ?
+    
+    	 using
+    		==> JDBC API ( java.sql .* )
+
+
+--------------------------------------------------------
+basic steps to use 'jdbc Api'
+--------------------------------------------------------
+
+
+ step-1 : register/install 'jdbc-driver' with jdbc API
+ step-2 : create connection with db-server using url,user & password
+ 
+ step-3 : create jdbc-statements with SQL
+ step-4 : execute statements & process results
+ 
+ step-5 : handle SQLExceptions
+ step-6 : handle txns ( commit or roolback )
+ 
+ step-7 : release connection
+ 
+ -----------------------------------------------------------
+
+
+
+
+ code
+ 
+ 	- layer(s)
+ 	
+ 		1. service layer ==> processing logic
+ 		2. data/repository layer ==> persisting logic
+ 		
+ 		
+ how to separate data-accessing-code from data-processing code ?
+ 
+ 	using 'DAO'(Data Accessing Object)/ Repository pattern			
+
+
+
+
+
+
+			
+				
+				
+							
+	
