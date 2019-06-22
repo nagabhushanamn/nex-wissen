@@ -1,0 +1,113 @@
+
+
+
+ IO
+ -------
+ 
+ 
+ 	sources
+ 	--------
+ 	
+ 		- standard input/output  
+ 		- file-system
+ 		- n/w sockets
+ 		
+ 		
+ 	types of input/output
+ 	---------------------
+ 	
+ 		a. 8-bit / byte-stream
+ 		b. 16-bit / character-stream
+ 		
+ 	
+ 	
+ 	Abstract-Types ( java.io.* )
+ 	------------------------------
+ 	
+ 		- InputStream
+ 		- OutputStream
+ 		
+ 		- Reader
+ 		- Writer
+ 	
+ 	
+ 	
+ 	source : file
+ 	---------------
+ 	
+ 		- FileInputStream
+ 		- FileOutputStream
+ 		
+ 		- FileReader
+ 		- FileWriter
+ 		
+ 		
+ 	source : buffer	
+ 	----------------
+ 	
+ 		- BufferedInputStream
+ 		- BufferedOutputStream
+ 		
+ 		- BufferedReader
+ 		- BufferedWriter
+ 		
+ 	
+ 	data/type-conversion-types while IO
+ 	------------------------------------
+ 	
+ 	
+ 		- ObjectOutputStream
+ 		- ObjectInputStream
+ 		
+ 		- DataOutputStream
+ 		- DataInputStream
+ 		
+ 		- InputStreamReader
+ 		
+ 	print/write data on any source
+ 	--------------------------------
+ 		
+ 		- PrintStream
+ 		- PrintWriter
+ 		
+ 		
+ 		
+ 	.....................	
+ 	
+ 		
+ 	-------------------------------------------------------------
+ 	
+ 	serialization
+ 	---------------
+ 	
+ 	
+ 	converting current state of java-object into byte-stream,
+ 	then persist into file-system 
+ 	or txr over n/w to other java-application.
+ 	
+ 	
+ 	why we need ?
+ 	
+ 		=> for future re-use
+ 		=> to move passive objects from heap to secondary storage
+ 		=> for distributed java-application
+ 		
+ 		
+ 	
+ 	
+ 	
+ 	java.nio.*;
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 				
