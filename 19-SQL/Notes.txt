@@ -55,9 +55,6 @@ basic steps to use 'jdbc Api'
  -----------------------------------------------------------
 
 
-
-
- code
  
  	- layer(s)
  	
@@ -73,6 +70,96 @@ basic steps to use 'jdbc Api'
 
 
 
+design & performance issues with JDBC API
+-----------------------------------------
+
+	-> connection management is manual
+	-> too much boiler-plate/duplicate code
+	-> relationship between entities should manage manually
+	-> code partialy depends RDBMS product
+	-> no cache support for frequent data
+	-> All exceptions are 'checked' exception
+	....
+	
+	
+	
+	
+	ORM Frameworks
+	------------------
+	
+	JPA ( Java Persistent API )
+	
+		 Hibernate   ==> jboss community   ( most popular )
+		 Toplink     ==> oracle
+		 Eclipselink ==> eclipse community
+		 iBatis      ==> Apache
+	 
+	
+	
+	
+	------------------------------------------------
+	
+	
+	JEE
+	
+		- servlet
+		- JSP
+	
+	----------------------------------------------
+	
+	Spring F.W
+	
+		- boot
+		- core
+		- web
+		- data
+		- security
+		- batch
+		..		
+	
+	-----------------------------------------------
+	
+	REST api
+	
+	Microservices
+	
+		- spring cloud
+
+	------------------------------------------------
+	
+	
+	Front-End
+	
+		- HTML
+		- CSS
+		- Javascript ==> ES6 & ES7
+		
+		 F.Ws
+		 
+		 	- Angular
+		 	- React
+		 	
+		 		-> web - UI
+		 		
+		 	- Ionic				
+	
+				-> mobile UI
+	-----------------------------------------------
+	
+	Dev-Ops
+	
+	Tools
+	
+		-> Maven
+		-> Git
+		-> jenkins			
+		-> docker
+		-> kubernetes
+	
+	
+	
+	
+	
 
 			
 				

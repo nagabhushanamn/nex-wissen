@@ -1,0 +1,22 @@
+
+
+web servers
+-------------
+
+    - Apache => http-server
+    - Microsoft => IIS
+    - ngnx
+    ...
+
+
+----------------------------------
+> node -v
+> npm -v
+
+> npm i -g live-server
+
+on project directory
+
+> live-server --port=<fav-port>
+
+----------------------------------
