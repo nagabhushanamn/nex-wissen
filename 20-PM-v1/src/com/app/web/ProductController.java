@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.app.model.Product;
+import com.app.model.ProductType;
 import com.app.repository.JdbcProductRepository;
 import com.app.repository.ProductRepository;
 
@@ -26,28 +27,51 @@ import com.app.repository.ProductRepository;
  * 
  */
 
-@WebServlet(urlPatterns = { "/products" })
+@WebServlet(urlPatterns = { "/products", "/products/delete", "/products/new" })
 public class ProductController extends HttpServlet {
 
 	private ProductRepository productRepository;
 
 	@Override
 	public void init(ServletConfig config) throws ServletException {
-		System.out.println("ProductController :: init()");
 		productRepository = new JdbcProductRepository();
 	}
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		System.out.println("ProductController :: doGet()");
-		List<Product> products = productRepository.findAll();
-		req.setAttribute("products", products);
-		req.getRequestDispatcher("/products-view.jsp").forward(req, resp);
+
+		String reqURI = req.getRequestURI();
+		if (reqURI.equals("/PM/products")) {
+
+			List<Product> products = productRepository.findAll();
+			req.setAttribute("products", products);
+			req.getRequestDispatcher("/products-view.jsp").forward(req, resp);
+
+		}
+		if (reqURI.equals("/PM/products/delete")) {
+			String id = req.getParameter("id");
+			productRepository.delete(Integer.parseInt(id));
+			resp.sendRedirect("/PM/products");
+		}
+	}
+
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+		String name = req.getParameter("name");
+		String price = req.getParameter("price");
+		String type = req.getParameter("type");
+		// validation & conversion
+		Product product=new Product();
+		product.setName(name);
+		product.setPrice(Double.parseDouble(price));
+		product.setType(ProductType.valueOf(type));
+		productRepository.save(product);
+		resp.sendRedirect("/PM/products");
 	}
 
 	@Override
 	public void destroy() {
-		System.out.println("ProductController :: destroy()");
 	}
 
 }

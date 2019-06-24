@@ -86,7 +86,7 @@ public class JdbcProductRepository implements ProductRepository {
 		try {
 			connection = SQLConnectionFactory.getConnection();
 
-			String sql = "delete from product p where p.id=?";
+			String sql = "delete from PM.PRODUCTS where id=?";
 			PreparedStatement ps = connection.prepareStatement(sql);
 			ps.setInt(1, id);
 

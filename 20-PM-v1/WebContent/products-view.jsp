@@ -25,8 +25,8 @@
 				<td><%=product.getName() %></td>
 				<td>&#8377;<%=product.getPrice() %></td>
 				<td><%=product.getType() %></td>
-				<td><a href>Edit</a></td>
-				<td><a href>Delete</a></td>
+				<td><a href="/PM/products/edit?id=<%=product.getId()%>">Edit</a></td>
+				<td><a href="/PM/products/delete?id=<%=product.getId()%>">Delete</a></td>
 			</tr>
 			<%
 				}
