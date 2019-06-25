@@ -3,7 +3,10 @@ package com.example.model;
 public class Account {
 
 	private String number;
-	private String balance;
+	private double balance;
+
+	public Account() {
+	}
 
 	public Account(String number) {
 		super();
@@ -23,11 +26,11 @@ public class Account {
 		this.number = number;
 	}
 
-	public String getBalance() {
+	public double getBalance() {
 		return balance;
 	}
 
-	public void setBalance(String balance) {
+	public void setBalance(double balance) {
 		this.balance = balance;
 	}
 

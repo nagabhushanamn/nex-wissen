@@ -29,9 +29,8 @@ public class App {
 		// -------------------------------------
 		LOGGER.info("app in use");
 		TxrService txrService = context.getBean("txrService", TxrService.class);
-		txrService.transfer(100.00, "1", "2");
+		txrService.transfer(5500.00, "2", "1");
 		System.out.println();
-		txrService.transfer(100.00, "2", "1");
 
 		System.out.println();
 		// -------------------------------------
