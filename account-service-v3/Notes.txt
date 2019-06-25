@@ -31,6 +31,40 @@ Layer(s)
 ------------------------------------------- 
 
 
+
+
+spring ==> init-phase  ==> creating application-context
+
+
+
+	1. load bean-definition from XML files
+	2. BFPP
+	
+	for each bean-definition
+	
+	3. create bean instance
+	4. injects dependencies
+	5. BPP  - before init()
+	6. bean - init() 
+	7. BPP  - after init()
+	
+	if all steps success then context created with beans
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		 
 		 
 		 

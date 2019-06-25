@@ -7,7 +7,6 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import com.example.repository.AccountRepository;
 import com.example.repository.JdbcAccountRepository;
 import com.example.repository.JpaAccountRepository;
-import com.example.service.NEFTTxrService;
 import com.example.service.TxrService;
 
 public class App {
@@ -29,10 +28,9 @@ public class App {
 		// -------------------------------------
 		LOGGER.info("app in use");
 		TxrService txrService = context.getBean("txrService", TxrService.class);
-		txrService.transfer(5500.00, "2", "1");
+		txrService.transfer(900.00, "2", "1");
 		System.out.println();
 
-		System.out.println();
 		// -------------------------------------
 		// destroy
 		// -------------------------------------

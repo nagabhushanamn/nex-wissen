@@ -26,8 +26,9 @@ public class JdbcAccountRepository implements AccountRepository {
 	public Account load(String accNum) {
 		LOGGER.info("loading account : " + accNum);
 		Account account = new Account();
+		Connection con = null;
 		try {
-			Connection con = dataSource.getConnection();
+			con = dataSource.getConnection();
 			String sql = "select * from ACCOUNTS where num=?";
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setString(1, accNum);
@@ -40,6 +41,12 @@ public class JdbcAccountRepository implements AccountRepository {
 
 		} catch (SQLException e) {
 			e.printStackTrace();
+		} finally {
+			try {
+				con.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
 		}
 		return account;
 	}
@@ -49,19 +56,24 @@ public class JdbcAccountRepository implements AccountRepository {
 		//
 		LOGGER.info("updating account : " + account.getNumber());
 
+		Connection con = null;
 		try {
-			Connection con = dataSource.getConnection();
+			con = dataSource.getConnection();
 			String sql = "update ACCOUNTS set balance=? where num=?";
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setDouble(1, account.getBalance());
 			ps.setString(2, account.getNumber());
 
 			ps.executeUpdate();
-
 		} catch (SQLException e) {
 			e.printStackTrace();
+		} finally {
+			try {
+				con.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
 		}
-
 		return account;
 	}
 

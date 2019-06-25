@@ -1,5 +1,6 @@
 
 # MySQL
+
 create database my_bank;
 use my_bank;
 
