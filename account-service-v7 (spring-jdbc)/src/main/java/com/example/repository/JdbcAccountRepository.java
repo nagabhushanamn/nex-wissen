@@ -6,8 +6,8 @@ import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.example.model.Account;
 import com.example.model.Txn;
@@ -20,6 +20,7 @@ public class JdbcAccountRepository implements AccountRepository {
 
 	private JdbcTemplate jdbcTemplate;
 
+	
 	@Autowired
 	public JdbcAccountRepository(DataSource dataSource) {
 		this.jdbcTemplate = new JdbcTemplate(dataSource);

@@ -25,6 +25,7 @@ public class TxrServiceImpl implements TxrService {
 		LOGGER.info("TxrServiceImpl got injection with accountRepository");
 	}
 
+	
 	@Transactional
 	@Override
 	public boolean transfer(double amount, String fromAccNum, String toAccNum) {
@@ -36,11 +37,10 @@ public class TxrServiceImpl implements TxrService {
 		toAccount.setBalance(toAccount.getBalance() + amount);
 
 		accountRepository.update(fromAccount);
-		boolean b = false;
+		boolean b = true;
 		if (b)
 			throw new RuntimeException("ooops");
 		accountRepository.update(toAccount);
-		
 		
 		Txn debitTxn=new Txn();
 		debitTxn.setAccount(fromAccount);

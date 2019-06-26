@@ -55,12 +55,7 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.47</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
-		<dependency>
-			<groupId>org.aspectj</groupId>
-			<artifactId>aspectjweaver</artifactId>
-			<version>1.9.4</version>
-		</dependency>
+		
 
 
 
