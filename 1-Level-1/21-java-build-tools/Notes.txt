@@ -1,0 +1,27 @@
+
+
+what is build ?
+
+    - compile
+    - test
+    - package
+    - deploy
+    ....
+
+java build automation tools   
+
+    - ANT   : Apache
+    - Maven : Apache 
+    - Gradle
+    - SBT
+   ....
+
+--------------------------------
+
+what is Maven?
+
+ - build tool
+ - dependency management tool
+ - documentation tool
+
+---------------------------------

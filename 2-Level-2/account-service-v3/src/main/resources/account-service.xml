@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean class="com.example.spring.BFPP"></bean>
+	<bean
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location" value="classpath:db.properties" />
+	</bean>
+
+	<bean class="com.example.spring.BPP"></bean>
+
+	<bean id="dataSource"
+		class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="${db.driver}" />
+		<property name="url" value="${db.url}" />
+		<property name="username" value="${db.user}" />
+		<property name="password" value="${db.password}" />
+		<property name="maxIdle" value="1" />
+	</bean>
+
+	<bean id="jdbcAccountRepository"
+		class="com.example.repository.JdbcAccountRepository">
+		<constructor-arg ref="dataSource" />
+	</bean>
+
+	<bean id="txrService" init-method="init"
+		class="com.example.service.TxrServiceImpl">
+		<property name="accountRepository"
+			ref="jdbcAccountRepository" />
+		<property name="txrType" value="IMPS" />
+	</bean>
+	<bean id="txrService2" init-method="init"
+		class="com.example.service.TxrServiceImpl">
+		<property name="accountRepository"
+			ref="jdbcAccountRepository" />
+		<property name="txrType" value="RTGS" />
+	</bean>
+
+
+</beans>
