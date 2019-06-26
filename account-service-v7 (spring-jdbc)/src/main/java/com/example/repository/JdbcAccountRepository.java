@@ -10,6 +10,7 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
 import com.example.model.Account;
+import com.example.model.Txn;
 
 @Repository("jdbcAccountRepository")
 @Qualifier("jdbc")
@@ -44,6 +45,19 @@ public class JdbcAccountRepository implements AccountRepository {
 		String sql = "update ACCOUNTS set balance=? where num=?";
 		int rowCount = jdbcTemplate.update(sql, account.getBalance(), account.getNumber());
 		return account;
+	}
+
+	@Override
+	public void save(Txn txn) {
+		String sql = "insert into TXNS(amount,closing_balance,date,type,acc_num) values (?,?,?,?,?)";
+		jdbcTemplate.update(
+				sql, 
+				txn.getAmount(), 
+				txn.getClosingBalance(), 
+				txn.getLocalDateTime(), 
+				txn.getType().name(),
+				txn.getAccount().getNumber()
+				);
 	}
 
 }
