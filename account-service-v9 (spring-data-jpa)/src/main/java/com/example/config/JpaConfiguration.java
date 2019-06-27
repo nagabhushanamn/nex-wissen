@@ -42,20 +42,12 @@ public class JpaConfiguration {
 	}
 
 	@Bean
-	public PlatformTransactionManager jpaTxnManager(EntityManagerFactory emf) {
+	public PlatformTransactionManager transactionManager(EntityManagerFactory emf) {
 		JpaTransactionManager jpaTransactionManager = new JpaTransactionManager();
 		jpaTransactionManager.setEntityManagerFactory(emf);
 		return jpaTransactionManager;
 	}
 	
 	
-	// for JDBC techonology
-
-//	@Bean
-//	public PlatformTransactionManager dsTxnManager(EntityManagerFactory emf) {
-//		DataSourceTransactionManager dsTransactionManager = new DataSourceTransactionManager();
-//		dsTransactionManager.setDataSource(dataSource);
-//		return dsTransactionManager;
-//	}
 
 }
