@@ -1,0 +1,42 @@
+
+
+
+Entity Relationship
+---------------------
+
+
+	types of r/s
+	---------------
+	
+		- uni-directional
+		- bi-directional
+		
+		
+	types of association
+	--------------------
+	
+		- 1 - 1
+		- 1 - M
+		- M - 1
+		- M - M
+		
+		
+		
+	How to implement entity relation in relational-model
+	------------------------------------------------------
+	
+	 - JoinColumn
+	 - JoinTable
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+		
+		
+				
