@@ -1,0 +1,15 @@
+
+
+
+spring MVC
+--------------
+
+	how to map http-request to controller?
+	
+	 many ways
+	 
+	 -> by URL
+	 -> by HTTP-method
+	 -> by presence/absence of request params/values
+	 -> by presence/absence of request header/values
+	 -> by request-body type

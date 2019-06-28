@@ -19,7 +19,7 @@ public class WebApplicationInitializer implements org.springframework.web.WebApp
 		ServletRegistration.Dynamic dispatcher = servletContext.addServlet("dispatcher",
 				new DispatcherServlet(context));
 		dispatcher.setLoadOnStartup(0);
-		dispatcher.addMapping("*.htm");
+		dispatcher.addMapping("/");
 
 	}
 
