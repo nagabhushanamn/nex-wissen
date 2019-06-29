@@ -1,0 +1,18 @@
+
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/my_bank
+    username: root
+    password: root1234
+    
+  jpa:
+    show-sql: true
+    
+trainer:
+  sub: Full-stack
+  duration:  30 
+  
+  
+  

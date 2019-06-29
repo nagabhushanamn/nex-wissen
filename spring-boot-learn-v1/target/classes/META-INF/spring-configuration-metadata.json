@@ -1,0 +1,22 @@
+{
+  "groups": [
+    {
+      "name": "trainer",
+      "type": "com.example.spring.TrainerAutoConfiguration",
+      "sourceType": "com.example.spring.TrainerAutoConfiguration"
+    }
+  ],
+  "properties": [
+    {
+      "name": "trainer.duration",
+      "type": "java.lang.Integer",
+      "sourceType": "com.example.spring.TrainerAutoConfiguration"
+    },
+    {
+      "name": "trainer.sub",
+      "type": "java.lang.String",
+      "sourceType": "com.example.spring.TrainerAutoConfiguration"
+    }
+  ],
+  "hints": []
+}
