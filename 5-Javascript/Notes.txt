@@ -1,0 +1,71 @@
+
+
+----------------------------------------------------------------------
+
+.js is
+
+    - client-side language  on browser
+    - server-side language  on Node.js
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+ .js Features
+
+    - FP + OOP
+    - dynamic   
+
+    - all IO operations by default non-blocking
+    - single-thread process , can execute concurrent actions while IO happening
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+How to run .js program ?
+
+    => using .js-runtime
+
+
+    browser-evni
+    ---------------
+
+    - chrome  => v8(c++)
+    - firefox => rhino/spider monkey ( java )
+    - IE/Edge => chakra
+    - Safari  => nitro
+    .....
+
+
+    other envi
+    ---------------
+
+    - Node.js => v8
+    - JVM     => rhino / nashorn
+    ....
+
+    Ref : https://kangax.github.io/compat-table/es6/
+
+
+    
+----------------------------------------------------------------------
+
+.js-lang is based on 'ECMAScript spec '
+
+    latest : ES6
+ 
+----------------------------------------------------------------------
+
+"Hello World"
+
+---------------------------------------------------------------------- 
+
+> node -v
+> npm -v
+
+> npm i -g live-server
+
+on project directory
+
+> live-server --port=8181
+---------------------------------------------------------------------- 
