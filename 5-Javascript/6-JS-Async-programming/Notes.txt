@@ -1,0 +1,75 @@
+
+
+-----------------------------------------------------------------
+.js-lang
+
+    - IO operations by default non-blocking
+    - single-thread process, can execute concurrent actions while IO happening
+
+-----------------------------------------------------------------
+
+    browser e.g chrome
+
+    1. Javascript Engine/Runtime  ( v8 )   ==> based on ECMAScript spec
+
+         a. single-call-stack   --> to execute function/context/scope
+         b. heap                --> to hold objects
+
+    2. web APIs ( e.g DOM, XHR, Timer , HTML5 APIs,.. )  ==> w3c recommendation
+
+    3. Event-Queue
+
+    4. Event-Loop
+
+    ----------------------------------------------------------------------
+
+    Ref:
+
+    https://developer.mozilla.org/bm/docs/Web/JavaScript/EventLoop
+    http://latentflip.com/loupe
+
+    ----------------------------------------------------------------------
+
+    summary :
+
+    on event, event-handler always executes async by an event-loop
+
+    ----------------------------------------------------------------------
+
+    Async APIs
+    -----------
+
+      - Promise API   ( ES6 )
+
+
+
+    e.g
+
+     module-2 : service-module ==> Non-UI-logic
+     -----------------------------------------
+
+     function getService(){
+         return promise;
+     }    
+
+     module-1 : UI-module  ==> rendering logic
+     ----------------------------------
+
+     function render(){
+         // ..
+            let promise=getService();
+            promise.then(...)
+         // .....
+     }
+
+
+//------------------------------------------------------------------------
+
+
+RxJS ( Reactive Extensions in JavaScript)
+
+
+
+
+
+

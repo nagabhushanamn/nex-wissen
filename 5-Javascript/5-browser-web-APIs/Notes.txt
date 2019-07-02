@@ -1,0 +1,58 @@
+
+// Front-End-Developer
+----------------------------------------------------------
+ UI  ==> content/data + style + behavior
+
+ content  ==> HTML
+ style    ==> CSS
+ behavior ==> javascript
+
+---------------------------------------------------------------------------------------
+
+
+what .js-lang can do on HTML-page in browser envi?
+
+
+using browser provided web-APIs,
+JavaScript-lang can bring any dynamic activity/data to web-page
+
+browser-APIs :  ==> are based on 'w3c' recommendations
+implemented nativly by browser vendors & abstracted as JavaScript objects & functions
+
+
+browser-APIs  :
+    ==> DOM, XHR,Timer,....
+
+
+using DOM
+---------------
+ -> can create,retreive,update,delete HTML elements
+ -> can change element's inner text/html content 
+ -> can change element's attributes/properties
+ -> can change element's styles ( css )
+ -> can validate form-fields before submit to server-program
+ -> can create rich UI-components like  autocomplete, calenders,..
+ -> can listen any events on element
+
+using XHR
+---------
+ -> can communicate with server-side programs async ( AJAX )
+
+using Timer API
+----------------
+-> can execute any action on timeout/time-interval
+
+
+HTML5 APIs
+------------------
+
+ - https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5
+
+
+--------------------------------------------------------------------------------------- 
+ 
+
+
+
+
+

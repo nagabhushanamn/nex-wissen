@@ -1,0 +1,67 @@
+
+--------------------------------------
+Money Transfer System
+--------------------------------------
+
+step-1 : identify data-model 
+
+step-2 : layer(s)
+
+        layer-1 : data/repository layer  ==> persisting logic
+        layer-2 : service/business layer ==> processing logic
+
+
+--------------------------------------
+object oriented analysis and design
+--------------------------------------
+
+
+---------------------
+OO concepts
+---------------------
+
+    Abstraction
+    Encapsulation
+    Inheritance
+    Polymorphism
+
+-----------------------------------
+OO principles a.k.a SOLID principles
+-----------------------------------
+
+S — Single responsibility principle
+O — Open for extennsion,  closed for modification principle
+L — Liskov substitution principle
+I — Interface segregation principle
+D — Dependency Inversion principle    
+
+
+
+---------------------
+OO Patterns
+---------------------
+
+
+1- creational
+
+        => solutions to create objects effectively
+
+
+        a. singleton
+        b. factory
+        c. abstract factory
+        d. builder
+        e. prototype
+
+2- behavioral
+
+        => on event, how other objects should react
+
+3- structural
+
+        => how one object connect with other
+
+
+4-  Functional style pattern       
+
+

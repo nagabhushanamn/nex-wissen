@@ -1,31 +1,41 @@
 
 
+
+
 ----------------------------------------------------------------------
 
+Ref : 
+
+https://crockford.com/
+http://javascript.info/
+http://exploringjs.com/
+https://developer.mozilla.org/bm/docs/Web/JavaScript
+
+http://kangax.github.io/compat-table/es6/
+
+----------------------------------------------------------------------
 .js is
-
-    - client-side language  on browser
-    - server-side language  on Node.js
-
+    - client-side language for web-page on browser
+    - server-side language on Node.js
+    +
+    - Mobile Native Appln with tool support
+    - Desktop Appln with Electron
 ----------------------------------------------------------------------
 
-----------------------------------------------------------------------
  .js Features
 
     - FP + OOP
     - dynamic   
 
     - all IO operations by default non-blocking
-    - single-thread process , can execute concurrent actions while IO happening
+    - single-thread process , can execute concurrent action while IO happening
 
-----------------------------------------------------------------------
 
 ----------------------------------------------------------------------
 
 How to run .js program ?
 
-    => using .js-runtime
-
+    => using .js runtime
 
     browser-evni
     ---------------
@@ -36,36 +46,59 @@ How to run .js program ?
     - Safari  => nitro
     .....
 
-
     other envi
     ---------------
 
     - Node.js => v8
     - JVM     => rhino / nashorn
-    ....
+    ...
 
-    Ref : https://kangax.github.io/compat-table/es6/
-
-
-    
+ 
 ----------------------------------------------------------------------
 
 .js-lang is based on 'ECMAScript spec '
 
-    latest : ES6
+    latest : ES6/ES7
  
 ----------------------------------------------------------------------
 
 "Hello World"
 
----------------------------------------------------------------------- 
+----------------------------------------------------------------------
 
-> node -v
-> npm -v
+JS - topics
+------------
+Level-1:
+    => data-types
+    => scopes
+    => FP  - depth
+    => OOP 
+    => SOLID principles
+    => design patterns
+level-2:
+    => unit-Testing ( mocha m JEST & assertion lib)
+Level-3:
+    => new-syntax
+    => new-apis
+    => module-standards ( commonJS & ES Modules)
+Level-4:
+    => concurrency model & event loop
+    => Async APIs ( Promise , RxJS , ..)
+Level-5:
+    => Tools
+------------------------------------------------------------
 
-> npm i -g live-server
 
-on project directory
 
-> live-server --port=8181
----------------------------------------------------------------------- 
+
+
+
+
+
+
+
+
+
+
+
+

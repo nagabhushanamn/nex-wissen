@@ -1,0 +1,86 @@
+
+---------------------------------------------------------------
+.js developement without module standard & loader
+---------------------------------------------------------------
+
+Problems:
+
+==> global naming collisions
+==> loading dependency modules before dependent using them
+
+
+---------------------------------------------------------------
+Soln: => from third-parties , we got module standards & loaders
+---------------------------------------------------------------
+
+- AMD ( Async Module Definition ) spec
+- UMD
+- commonJS    ( popular standard )
+
+
+
+---------------------------------------------------------------
+// commonJS module standard
+---------------------------------------------------------------
+
+-> by default, every .js file is module
+-> by default, all var(s) & functions in .js file are private
+-> to abstract/export any member(s), use 'module.exports' object
+-> to require/import any module , use 'require()' function
+-> group related modules as package with description  file 'package.json'
+
+
+imp-note : Node.js runtime implemented this standard as default module standard.
+
+--------------------------------------------------------------
+
+
+
+---------------------------------
+NPM ( Node Package Manager) tool
+---------------------------------
+
+
+ --> cli tool
+ --> part of Node.js runtime
+
+
+why we need ?
+
+ --> to publish .js-packages to NPM-repository  ( if package is open-source)
+ --> to install .js-packages from NPM-repository
+
+ --> to manage build-cycle ( i.e start, compile , test , build-for-production , start-dev-server, ...)
+
+--------------------------------------------------------------
+
+
+
+ module-bundle tools
+ ---------------------
+
+    e.g
+    
+    => browserify
+    => webpack
+     
+
+--------------------------------------------------------------     
+
+
+
+--------------------------------------------------------------
+From ECMAScript spec
+---------------------------------------------------------------
+// ES module standard
+---------------------------------------------------------------
+
+-> by default, every .js file is module
+-> by default, all var(s) & function(s) in .js file are private
+-> to abstract/export any member(s), use 'export' keyword
+-> to require/import any module , use 'import' keyword
+-> group related modules into package with description  file 'package.json'
+
+--------------------------------------------------------------
+
+
