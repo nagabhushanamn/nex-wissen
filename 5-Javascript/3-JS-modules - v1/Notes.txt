@@ -16,8 +16,7 @@ Soln: => from third-parties , we got module standards & loaders
 - AMD ( Async Module Definition ) spec
 - UMD
 - commonJS    ( popular standard )
-
-
+...
 
 ---------------------------------------------------------------
 // commonJS module standard

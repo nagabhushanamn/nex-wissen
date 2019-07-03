@@ -1,0 +1,22 @@
+{
+  "name": "play-with-js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build":"./node_modules/.bin/webpack --config webpack.config.js",
+    "start": "./node_modules/.bin/webpack-dev-server --config webpack.config.dev.js"
+  },
+  "author": "Nag",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.11",
+    "nex-greet": "1.0.0"
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.35.2",
+    "webpack-cli": "^3.3.5",
+    "webpack-dev-server": "^3.7.2"
+  }
+}
