@@ -36,13 +36,15 @@ using DOM
  -> can listen any events on element
  ...
 
-using XHR
----------
+using XHR / Fetch API
+------------------------
  -> can communicate with server-side programs async ( AJAX )
 
 using Timer API
 ----------------
 -> can execute any action on timeout/time-interval
+
+
 
 
 HTML5 APIs
@@ -56,5 +58,135 @@ HTML5 APIs
 
 
 
+-----------------------------------------------------------------------
+problems / limitations / complexities using plain-JS ( your code) with browser APIs
+-----------------------------------------------------------------------
 
 
+-> browser compatability issues
+   http://www.caniuse.com
+-> memory issues should manage manually ( i.e clean un-used/invisble DOM elements)
+-> performance issues should manage manualy ( i.e DOm query/manaipulation should be minimal)   
+-> data binding is manual
+-> too much code for simple use-cases
+-> code oraganization is difficult ( i.e View & Model is tightly coupled.)
+
+-------------------------------------------------------------------------
+
+legacy soln:
+
+    ==> using server-side page technologies...
+
+        e.g  JSP, ASP.NET , PHP , .......
+
+     limitations/complexities:
+     -----------------------
+
+     -> on each request, server-side programs( i.e servlet & JSP ),
+        should process request, generate dynamic HTML page , keeping client prev req state
+
+     -> on each html response, transfering static resources again and again , will increase n/w b/w 
+
+     -> on each response , browser re-load current page
+
+-------------------------------------------------------------------------        
+
+
+modern soln :
+
+    ==> using client-side page technologies
+
+
+    how it possible now ?
+
+    --> modern browsers follows all web APIs in uniform-way
+    --> .js-lang improved lot
+    +
+    --> have many third-party's .js lib & F.Ws 
+
+
+-------------------------------------------------------------------------
+.js lib & F.Ws 
+-------------------------------------------------------------------------
+
+
+    .js DOM & XHR utility lib
+    ---------------------------
+
+    1. jQuery
+
+
+    MVC based .js lib & F.Ws
+    -------------------------
+
+    1. knockout.js
+    2. backbone.js  / Marionet.js
+    3. Ember.js
+    4. Angular.js  from google-team
+    ....
+
+    1. DOJO
+    2. ExtJS from sencha  ( commercial..)
+
+    ....
+
+
+             --> bi-directional data-flow b/w view & state/model
+
+             problems:
+
+                -> un-pridictable data-flow
+
+    
+
+
+    component-arch based .js lib & F.w
+    -----------------------------------  
+
+    
+
+        in web-UI ,
+
+        what is component ?
+        -------------------
+
+        Independent UI-fragement in web-page
+        with single-responsibility 
+
+        e.g
+
+        Box, Input,....
+
+     
+        how to create custom web-components?
+
+        2 ways
+
+        ---------------------------------------------------
+        way-1: using w3c's web component spec based APIs
+        ---------------------------------------------------
+
+
+         - HTML-Template API
+         - Shadow DOM ( private scoped envi ) API
+         - Custom Elements API
+
+
+        ---------------------------------------------------
+        way-2: using third party's js lib & F.Ws
+        ---------------------------------------------------
+
+        1. react.js    from facebook       : v16   
+        2. Angular     from google-team    : v8 ( our focus  )
+        3. Vue.js
+        4. Ember.js
+        5. Aurelia.js
+        6. polymer.js
+        ...
+
+        ----------------------------------------------------
+
+
+
+
+  

@@ -2,11 +2,12 @@ import 'bootstrap/dist/css/bootstrap.css'
 
 console.log("-index.js-");
 
+import './jq-demo'
 
 //--------------------------------------------
 // using DOM API
 //--------------------------------------------
-
+/*
 var box = document.querySelector('.alert-info')
 var showBtn = document.querySelector('.btn-primary')
 var hideBtn = document.querySelector('.btn-danger')
@@ -22,6 +23,7 @@ nextBtn.addEventListener('click', e => {
     box.style.display = ""
     box.innerHTML = "have lunch"
 })
+*/
 //--------------------------------------------
 
 
@@ -56,9 +58,9 @@ stopBtn.addEventListener('click', e => {
 })
 
 
-
+let timeEle = document.querySelector('.badge-danger');
 setInterval(() => {
-    document.querySelector('.badge-danger').innerHTML = new Date().toLocaleTimeString('en-US', { timeZone: 'Asia/Kolkata' })
+    timeEle.innerHTML = new Date().toLocaleTimeString('en-US', { timeZone: 'Asia/Kolkata' })
 }, 1000);
 
 
