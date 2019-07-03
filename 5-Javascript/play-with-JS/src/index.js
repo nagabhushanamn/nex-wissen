@@ -1,34 +1,104 @@
-
-// (function (exports, require, module, __filename, __dirname) {
-
-// import primaryItem, { softDrink1,softDrink2 } from './hotel/menu'
-// import primaryItem, { softDrink1 as drink1, softDrink2 as drink2 } from './hotel/menu'
-
-// import * as items from './hotel/menu'
-// or
-let items = require('./hotel/menu');
-let greetMod = require('nex-greet')
-var _ = require('lodash');
-import config from './config'
-
-// require('bootstrap/dist/css/bootstrap.css')
-// or
 import 'bootstrap/dist/css/bootstrap.css'
-import './css/my-theme.css';
+
+console.log("-index.js-");
 
 
-console.log('-index.js-')
+//--------------------------------------------
+// using DOM API
+//--------------------------------------------
 
-greetMod.greet('en')
+var box = document.querySelector('.alert-info')
+var showBtn = document.querySelector('.btn-primary')
+var hideBtn = document.querySelector('.btn-danger')
+var nextBtn = document.querySelector('.btn-success')
 
-let arr1 = [1, 2, 3, 4]
-let arr2 = [3, 4]
-let diff = _.difference(arr1, arr2);
-console.log(diff);
+hideBtn.addEventListener('click', e => {
+    box.style.display = "none"
+})
+showBtn.addEventListener('click', e => {
+    box.style.display = ""
+})
+nextBtn.addEventListener('click', e => {
+    box.style.display = ""
+    box.innerHTML = "have lunch"
+})
+//--------------------------------------------
 
-console.log(items.default);
-console.log(items.softDrink1);
 
-console.log(config)
+//--------------------------------------------
+// using DOM API + Timer API
+//--------------------------------------------
+let images = []
 
-// });
+
+let startBtn = document.getElementById('start-btn');
+let stopBtn = document.getElementById('stop-btn');
+
+let idx = 0;
+function changeImage() {
+    let nextImage = images[idx];
+    document.querySelector('img').src = nextImage;
+    idx++
+    if (idx === images.length) idx = 0
+}
+
+stopBtn.disabled = true;
+let interval;
+startBtn.addEventListener('click', e => {
+    stopBtn.disabled = false;
+    startBtn.disabled = true;
+    interval = setInterval(changeImage, 1000);
+})
+stopBtn.addEventListener('click', e => {
+    stopBtn.disabled = true;
+    startBtn.disabled = false;
+    clearInterval(interval);
+})
+
+
+
+setInterval(() => {
+    document.querySelector('.badge-danger').innerHTML = new Date().toLocaleTimeString('en-US', { timeZone: 'Asia/Kolkata' })
+}, 1000);
+
+
+
+
+//--------------------------------------------
+// using DOM API + XHR API / Fetch API
+//--------------------------------------------
+
+function loadTodos(count) {
+    let url = `https://jsonplaceholder.typicode.com/todos?_limit=${count}`;
+    let promise = fetch(url)// non-blocking IO / Async IO
+    document.getElementById('progress').innerHTML = "Loading Todos.."
+    promise
+        .then(response => response.json())
+        .then(todos => {
+            document.getElementById('progress').innerHTML = ""
+            let todosEles = todos.map(todo => {
+                return `
+                    <li class="list-group-item ${todo.completed ? 'bg-info' : ''}">
+                         <span class="badge badge-dark">${todo.id}</span>
+                         ${todo.title}
+                         <span class="text text-warning">${todo.completed}<span>
+                    </li>
+                `
+            })
+            document.getElementById('todo-list').innerHTML = todosEles.join(" ")
+        })
+        .catch(e => {
+            document.getElementById('progress').innerHTML = "Failed to load todos, check internet connectivity"
+        })
+}
+
+let todosBtn = document.getElementById('todos-btn');
+let todosCount = document.getElementById('todos-count');
+todosBtn.addEventListener('click', e => {
+    loadTodos(5)
+})
+todosCount.addEventListener('change', e => {
+    let count = e.target.value;
+    if (count === 'all') loadTodos(200)
+    else loadTodos(count)
+})

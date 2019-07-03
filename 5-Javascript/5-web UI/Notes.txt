@@ -1,4 +1,5 @@
 
+----------------------------------------------------------
 // Front-End-Developer
 ----------------------------------------------------------
  UI  ==> content/data + style + behavior
@@ -11,7 +12,6 @@
 
 
 what .js-lang can do on HTML-page in browser envi?
-
 
 using browser provided web-APIs,
 JavaScript-lang can bring any dynamic activity/data to web-page
@@ -26,13 +26,15 @@ browser-APIs  :
 
 using DOM
 ---------------
- -> can create,retreive,update,delete HTML elements
+
+ -> can create,retreive,update,delete HTML elements i.e page manipulation
  -> can change element's inner text/html content 
  -> can change element's attributes/properties
  -> can change element's styles ( css )
  -> can validate form-fields before submit to server-program
  -> can create rich UI-components like  autocomplete, calenders,..
  -> can listen any events on element
+ ...
 
 using XHR
 ---------
