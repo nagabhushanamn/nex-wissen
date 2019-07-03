@@ -6,12 +6,16 @@
 
 // import * as items from './hotel/menu'
 // or
-let items=require('./hotel/menu');
+let items = require('./hotel/menu');
 let greetMod = require('nex-greet')
 var _ = require('lodash');
-// var config=require('./config')
-
 import config from './config'
+
+// require('bootstrap/dist/css/bootstrap.css')
+// or
+import 'bootstrap/dist/css/bootstrap.css'
+import './css/my-theme.css';
+
 
 console.log('-index.js-')
 
@@ -23,7 +27,7 @@ let diff = _.difference(arr1, arr2);
 console.log(diff);
 
 console.log(items.default);
-console.log(items.softDrink1);  
+console.log(items.softDrink1);
 
 console.log(config)
 

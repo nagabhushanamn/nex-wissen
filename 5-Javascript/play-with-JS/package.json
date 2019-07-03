@@ -4,17 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build":"./node_modules/.bin/webpack --config webpack.config.js",
+    "build": "./node_modules/.bin/webpack --config webpack.config.js",
     "start": "./node_modules/.bin/webpack-dev-server --config webpack.config.dev.js"
   },
   "author": "Nag",
   "license": "ISC",
   "dependencies": {
+    "bootstrap": "^4.3.1",
     "lodash": "^4.17.11",
     "nex-greet": "1.0.0"
   },
   "devDependencies": {
+    "css-loader": "^3.0.0",
     "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^0.23.1",
     "webpack": "^4.35.2",
     "webpack-cli": "^3.3.5",
     "webpack-dev-server": "^3.7.2"
