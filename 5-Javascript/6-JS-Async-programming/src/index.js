@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 // import {} from './rxjs-learn-v2'
 
-import {} from './generator-func'
+// import {} from './generator-func'
 
 // #1
 
@@ -55,7 +55,8 @@ import {} from './generator-func'
 
 /*
 
-    <button class="veg">veg</button>
+    <button class="veg">veg-1</button>
+    <button class="veg">veg-2</button>
     <button class="non-veg">non-veg</button>
 
 */
@@ -73,6 +74,7 @@ $.on('.non-veg', 'click', function nonVegHandler(e) {
 });
 
 console.log("cont..with other work..");
+
 function longRunning() {
     var i = 0;
     while (i < 100) {
@@ -81,8 +83,8 @@ function longRunning() {
     }
 }
 longRunning();
-
 */
+
 
 //---------------------------------------
 // Non Blocking IO
@@ -90,7 +92,8 @@ longRunning();
 
 /*
 
-// in browser, IO  means ==> http-request/response , read/write with storage API, ... interacting with browser APIs
+// in browser, 
+IO  means ==> http-request/response , read/write with storage API, ... interactions with browser APIs
 
 
 // .js event-loop never blocked while IO happening thru browser APIs
@@ -118,24 +121,24 @@ console.log(("cont..with other work.."));
 // Quiz
 //---------------------------------------
 
-/*
+
 
 function teach() {
-    let tnrName = "Nag"; // this data will get move to Heap memory
+    let tnrName = "Nag";  // will move this data to heap
     try {
         console.log(tnrName + "-teaching .js ");
-        //throw new Error('js-error')
+        //throw new Error('hate .js')
         setTimeout(function () {
-            console.log(tnrName + '-teaching react');
-            //throw new Error('react-error')
-            console.log('teaching react ends');
-        }, 5000);
+            console.log(tnrName + '-teaching NG')
+            //throw new Error('hate NG')
+            console.log('teaching NG ends..')
+        }, 5000)
         console.log("teaching .js ends..");
     } catch (e) {
-        console.log("i caught - " + e.message);
+        console.log("i caught error : " + e.message);
     }
 }
 
 teach();
 
-*/
+

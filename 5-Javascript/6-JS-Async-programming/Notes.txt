@@ -15,7 +15,7 @@
          a. single-call-stack   --> to execute function/context/scope
          b. heap                --> to hold objects
 
-    2. web APIs ( e.g DOM, XHR, Timer , HTML5 APIs,.. )  ==> w3c recommendation
+    2. web APIs ( e.g DOM, XHR/Fetch, Timer , HTML5 APIs,.. )  ==> w3c recommendation
 
     3. Event-Queue
 

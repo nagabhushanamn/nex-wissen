@@ -1,0 +1,15 @@
+
+
+javascript lang 
+
+pros:
+
+    -> dynamic language
+
+cons:
+
+    -> dynamic language
+
+    soln:
+
+        ==> using TypeScript language
