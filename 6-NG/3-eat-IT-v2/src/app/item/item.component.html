@@ -3,8 +3,8 @@
     <img [src]="item.imgPath" class="img-fluid" />
   </div>
   <div class="col-9 col-sm-9 col-md-9 col-lg-9">
-    <h5>{{item.name}}</h5>
-    <h6>{{item.price}}</h6>
+    <h5>{{item.name|uppercase}} - <small>{{item.date|date:'hh:MM'}}</small></h5>
+    <h6>{{item.price|priceDiscount:item.discount|currency:item.currency:true}}</h6>
     <button (click)="handleBuy($event)" *ngIf="item.canBuy" class="btn btn-sm btn-dark">buy</button>
     &nbsp;<input size="2" readonly [value]="cartQty" />
     <br />
@@ -22,7 +22,7 @@
         </a>
       </li>
     </ul>
-    <div *ngIf="isTabSelected(1)">{{item.description}}</div>
+    <div *ngIf="isTabSelected(1)">{{item.description | slice:0:1000}}</div>
     <div *ngIf="isTabSelected(2)">Not Yet</div>
     <div *ngIf="isTabSelected(3)">
       <div *ngFor="let review of reviews">
@@ -32,3 +32,6 @@
     </div>
   </div>
 </div>
+<pre>
+  <!-- {{item|json}} -->
+</pre>

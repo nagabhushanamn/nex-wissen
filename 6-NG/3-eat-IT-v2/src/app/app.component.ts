@@ -14,7 +14,10 @@ export class AppComponent {
       id: 1,
       name: 'Veg',
       price: 200.00,
+      currency: 'INR',
+      discount: 30,
       canBuy: true,
+      date: Date.now(),
       imgPath: `assets/${'veg.png'}`,
       description: 'veg is always yummy'
     },
@@ -22,7 +25,9 @@ export class AppComponent {
       id: 2,
       name: 'Non Veg',
       price: 150.00,
+      currency: 'INR',
       canBuy: true,
+      date: Date.now(),
       imgPath: "assets/non-veg.png",
       description: 'non-veg is yummy'
     },
