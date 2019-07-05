@@ -1,9 +1,10 @@
 // console.log('-index.js-')
 import 'bootstrap/dist/css/bootstrap.css';
 
-// import {} from './promise-api'
+// import './promise-api'
+// import './promise-api-v2';
 
-// import {} from './rxjs-learn-v2'
+import './rxjs-learn-v1'
 
 // import {} from './generator-func'
 
@@ -92,7 +93,7 @@ longRunning();
 
 /*
 
-// in browser, 
+// in browser,
 IO  means ==> http-request/response , read/write with storage API, ... interactions with browser APIs
 
 
@@ -122,7 +123,7 @@ console.log(("cont..with other work.."));
 //---------------------------------------
 
 
-
+/*
 function teach() {
     let tnrName = "Nag";  // will move this data to heap
     try {
@@ -140,5 +141,6 @@ function teach() {
 }
 
 teach();
+*/
 
 

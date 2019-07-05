@@ -78,6 +78,7 @@ xtTrainingStream
 
 // Uni-cast
 
+/*
 
 let sub;
 let i = 0;
@@ -95,11 +96,11 @@ let stream = Observable.create(subscriber => {
     setTimeout(() => {
         i = 4;
         subscriber.next(i)
-    }, 2000)
+    }, 4000)
 
     // subscriber.error("oops")
     // subscriber.complete();
-    
+
 
 
 
@@ -107,7 +108,7 @@ let stream = Observable.create(subscriber => {
 
 
 
-//
+
 console.log("before subscribe..");
 stream.subscribe(
     next => console.log("Sub1 : Next - " + next)
@@ -116,20 +117,21 @@ console.log("after subscribe..");
 
 
 
+setTimeout(() => {
+    console.log("before subscribe..");
+    stream.subscribe(
+        next => console.log("Sub2 : Next - " + next)
+    );
+    console.log("after subscribe..")
+}, 2000);
 
-console.log("before subscribe..");
-let unsubscribe=stream.subscribe(
-    next => console.log("Sub2 : Next - " + next)
-);
-console.log("after subscribe..")
+*/
 
-unsubscribe();
-
-
+/*
 
 // multi-cast stream
 
-/*
+
 let stream = new Subject()
 
 let i = 0;
@@ -158,15 +160,15 @@ setTimeout(() => {
 
 */
 
-/*
 
-let emailField = document.getElementById('email')
-let emailStream = fromEvent(emailField, "input")
 
-emailStream
+let searchField = document.getElementById('search')
+let searchStream = fromEvent(searchField, "input")
+
+searchStream
     .pipe(debounceTime(2000))
     .subscribe(e => {
         console.log(e.target.value);
     })
 
-*/
+

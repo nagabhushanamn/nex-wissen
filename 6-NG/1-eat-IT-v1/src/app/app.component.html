@@ -1,0 +1,28 @@
+<div>
+  <!-- As a link -->
+  <nav class="navbar navbar-light bg-info">
+    <a class="navbar-brand" href="/">{{title}}</a>
+  </nav>
+
+  <hr />
+  <hr />
+
+  <div class="container">
+    <div class="list-group-item" *ngFor="let item of items;let idx=index">
+      <div class="row">
+        <div class="col-3 col-sm-3 col-md-3 col-lg-3">
+          <img src="{{item.imgPath}}" class="img-fluid"/>
+        </div>
+        <div class="col-9 col-sm-9 col-md-9 col-lg-9">
+          <span class="badge badge-danger">{{idx+1}}</span>
+          <h5>{{item.name}}</h5>
+          <h6>{{item.price}}</h6>
+          <div>{{item.description}}</div>
+          <button *ngIf="item.canBuy" class="btn btn-sm btn-dark">buy</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>

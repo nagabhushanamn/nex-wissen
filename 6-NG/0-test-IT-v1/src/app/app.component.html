@@ -1,0 +1,19 @@
+<div class="container">
+    <hr />
+    <h1>{{title}}</h1> {{bla}}
+    <hr />
+
+    <div>
+        <hr />
+        <h5>{{question.title}}</h5>
+        <hr />
+        <ul class="">
+            <li class="" *ngFor="let option of question.options">
+                <input type="checkbox" />&nbsp;{{option}}
+            </li>
+        </ul>
+        <button *ngIf="!isAnswered" class="btn btn-sm btn-info">Next</button>
+    </div>
+
+
+</div>

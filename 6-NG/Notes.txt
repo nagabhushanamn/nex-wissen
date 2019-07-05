@@ -1,0 +1,43 @@
+
+
+NG topics
+================================
+
+
+I. data-binding
+----------------
+
+    3 types
+    -------
+
+    1. interpolation  ==> bind data from component's class to template
+
+        syntax:
+                in template ,  
+                    <element>{{expression}}</element>
+
+
+
+II. directives
+----------------
+
+    -> directions to generate dynamic HTML/UI
+
+    3 types
+    --------
+
+    1. component ==> directive + template
+    2. structural directives 
+        
+        - to change structure component's template
+
+        e.g
+
+            ngFor
+            ngIf
+            ngChoose
+            ..
+
+         syntax:
+
+         <element *ngFor="expression"/>   

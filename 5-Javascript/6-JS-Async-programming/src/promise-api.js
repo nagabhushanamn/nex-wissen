@@ -79,9 +79,9 @@ person.doWork();
 
 //---------------------------------------------------
 
-// service-module ==> service-logic
+// service-module ==> processing-logic
 
-// UI-module ==> ui logic
+// UI-module ==> rendering logic
 
 //---------------------------------------------------
 let todoService = {
@@ -127,7 +127,7 @@ let todoUI = {
 }
 //---------------------------------------------------
 
-todoUI.renderingTodos();
+// todoUI.renderingTodos();
 
 //---------------------------------------------------
 

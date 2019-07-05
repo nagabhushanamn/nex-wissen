@@ -28,6 +28,8 @@
     https://developer.mozilla.org/bm/docs/Web/JavaScript/EventLoop
     http://latentflip.com/loupe
 
+
+
     ----------------------------------------------------------------------
 
     summary :
@@ -36,11 +38,11 @@
 
     ----------------------------------------------------------------------
 
+
     Async APIs
     -----------
 
       - Promise API   ( ES6 )
-
 
 
     e.g

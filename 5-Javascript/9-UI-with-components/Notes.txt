@@ -1,0 +1,82 @@
+
+
+in web-UI ,
+
+what is component ?
+-------------------
+
+in web-page,Independent UI-fragement with single-responsibility
+
+e.g
+
+Box, Input,....
+
+
+is HTML element(s) follows component based arch ?  "Yes"
+
+
+    ==> HTML tag/element/component
+
+            i.e dom-element is individual component
+
+
+    ==> every html-tag/element/component
+        is an instance of HTMLXXXElement class
+
+
+    e.g
+
+    <div></div>  instanceof 'HTMLDivElement' class
+
+    i.e
+
+    HTMLDivElement      ==> HTML-component-class
+    <div></div>         ==> HTML-component-instance
+
+    HTMLInputElement    ==> HTML-component-class
+    <input/>            ==> HTML-component-instance
+
+
+
+
+    theory about UI components
+    ----------------------------
+
+    #1 ==> have single-responsibility ( i.e simple & smaller )
+    #2 ==> be free from other components ( losse coupling b/w components)
+    #3 ==> can have own properties properties  
+    #4 ==> can be statefull or stateless 
+    #5 ==> always re-render when state change
+    #6 ==> data-flow should be b/ parent-child
+
+    
+
+
+
+    somtimes we need components like these   
+
+    - Product
+    - Review
+    - Login
+    - Cart
+    - XXX
+    - DatePicker
+    - DataTable
+    - Search
+    .....
+
+
+
+        how to create custom web-components?
+
+        2 ways
+
+         ---------------------------------------------------
+        way-1: using w3c's web component spec based APIs
+        ---------------------------------------------------
+
+
+         - HTML Template API
+         - Shadow DOM API ( private scoped envi )
+         - Custom Elements API
+

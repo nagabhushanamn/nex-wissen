@@ -1,0 +1,87 @@
+
+        component's characteristics
+        ----------------------------
+
+        ==> always have single-responsibility     ( smaller & simpler )
+        ==> every component loosly-coupled from other
+
+
+
+         adv of component arch in web-ui
+         -------------------------------        
+            ==> easy to nest multiple component(s) together
+                without any complexity/pollution
+
+
+
+        
+        -------------------------------------
+        html-component properties/attributes
+        -------------------------------------
+
+        div component
+                - id
+                - class
+                - innerHTML
+
+        input component
+
+                - id 
+                - class
+                - type 
+
+
+
+
+        imp-note :
+        
+        => parent-component can create any child-component 
+           with properties 
+
+        i.e
+
+        immutable-value(s) given by parent-component to child-component 
+        while instantiating/re-rendering   
+
+
+
+        -------------------------------------
+        types of html-components
+        -------------------------------------
+
+
+        1. stateless components   e.g   <div>, <hr/>
+        2. statefull components   e.g   <input /> , <canvas> , <audio /> ...
+
+
+        state ==> component's own data
+
+
+         imp-note :
+        
+        ==> when component's state changes, always will re-render
+
+
+
+
+
+                    
+        -------------------------------------------------
+
+        in component based arch  
+                ==> uni-directional data-flow
+        i.e
+        parent --> child : data/props will go down
+        child  --> parent : action/event will come up
+
+
+
+        --------------------------------------------------
+
+
+        --------------------------------------------------
+
+        by default HTML/borwser-DOM, 
+        follows component architecture
+
+        --------------------------------------------------
