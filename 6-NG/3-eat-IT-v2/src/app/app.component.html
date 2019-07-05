@@ -1,0 +1,15 @@
+<div>
+
+  <app-navbar [value]="title"></app-navbar>
+
+  <hr />
+  <hr />
+
+  <div class="container">
+    <div class="list-group-item" *ngFor="let item of items">
+      <app-item [value]="item"></app-item>
+    </div>
+  </div>
+
+
+</div>
