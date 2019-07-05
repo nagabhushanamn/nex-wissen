@@ -10,11 +10,23 @@ I. data-binding
     3 types
     -------
 
-    1. interpolation  ==> bind data from component's class to template
+    1. interpolation 
 
         syntax:
                 in template ,  
                     <element>{{expression}}</element>
+
+    2. property/attribute 
+
+        syntax:
+                in template ,
+                    <element [prop1]="expression" prop2="static-value"/>
+
+    3. event
+
+        syntax:
+                in template ,
+                <element (event-name)="handler($event)"/>
 
 
 
@@ -41,3 +53,5 @@ II. directives
          syntax:
 
          <element *ngFor="expression"/>   
+
+    3. attribute/property directives

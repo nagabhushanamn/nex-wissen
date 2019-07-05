@@ -7,14 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'eat-IT-v1';
-
+  currentTab = 1
   items = [
     {
       id: 1,
       name: 'Veg',
       price: 200.00,
       canBuy: true,
-      imgPath: "assets/veg.png",
+      imgPath: `assets/${'veg.png'}`,
       description: 'veg is always yummy'
     },
     {
@@ -27,5 +27,13 @@ export class AppComponent {
     },
 
   ]
+
+  isTabSelected(tabIndex) {
+    return this.currentTab === tabIndex;
+  }
+  changeTab(event, tabIndex) {
+    event.preventDefault();
+    this.currentTab = tabIndex;
+  }
 
 }

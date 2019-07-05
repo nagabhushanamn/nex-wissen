@@ -11,14 +11,38 @@
     <div class="list-group-item" *ngFor="let item of items;let idx=index">
       <div class="row">
         <div class="col-3 col-sm-3 col-md-3 col-lg-3">
-          <img src="{{item.imgPath}}" class="img-fluid"/>
+          <img [src]="item.imgPath" class="img-fluid" />
         </div>
         <div class="col-9 col-sm-9 col-md-9 col-lg-9">
           <span class="badge badge-danger">{{idx+1}}</span>
           <h5>{{item.name}}</h5>
           <h6>{{item.price}}</h6>
-          <div>{{item.description}}</div>
           <button *ngIf="item.canBuy" class="btn btn-sm btn-dark">buy</button>
+          <br />
+          <ul class="nav nav-tabs">
+            <li class="nav-item">
+              <a (click)="changeTab($event,1)" 
+                 class="nav-link" 
+                 [class.active]="isTabSelected(1)" 
+                 href="/">Description
+              </a>
+            </li>
+            <li class="nav-item">
+              <a (click)="changeTab($event,2)" 
+                 [ngClass]="{'nav-link':true,active:isTabSelected(2)}" 
+                 href="/">Ingre..
+              </a>
+            </li>
+            <li class="nav-item">
+              <a (click)="changeTab($event,3)" 
+                 [ngClass]="{'nav-link':true,active:isTabSelected(3)}"
+                 href="/">Reviews
+              </a>
+            </li>
+          </ul>
+          <div *ngIf="isTabSelected(1)">{{item.description}}</div>
+          <div *ngIf="isTabSelected(2)">Not Yet</div>
+          <div *ngIf="isTabSelected(3)">None Yet</div>
         </div>
       </div>
     </div>
