@@ -6,15 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  
   title = 'eat-IT-v1';
   cart = {}
   cartQty = 0;
-  isCartOpen = false;
-
-  toggleCart(event) {
-    event.preventDefault()
-    this.isCartOpen = !this.isCartOpen;
-  }
 
   addToCart(event) {
     let { item } = event;
@@ -29,11 +24,6 @@ export class AppComponent {
     this.cartQty = Object.keys(this.cart).length;
   }
 
-  ngOnInit() {
-    // setInterval(() => {
-    //   this.addToCart({ item: { id: 1, name: '..' } })
-    // }, 3000)
-  }
 
 
 }

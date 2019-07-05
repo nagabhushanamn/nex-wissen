@@ -4,12 +4,15 @@
   <app-cart-badge [value]="cartQty"></app-cart-badge>
   <hr />
   <div class="container">
-    <app-cart-view [cart]="cart"></app-cart-view>
-
-    <div class="list-group-item" *ngFor="let item of items | slice:0:10">
-      <app-item [value]="item" (buy)="addToCart($event)" [cartQty]="cart[item.id]?.qty">
-      </app-item>
-    </div>
-
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <a class="nav-link " href="/" (click)="toggleCart($event)">{{isCartOpen?'items':'cart'}}</a>
+      </li>
+    </ul>
+  </div>
+  <hr />
+  <div class="container">
+    <app-cart-view *ngIf="isCartOpen" [cart]="cart"></app-cart-view>
+    <app-item-list *ngIf="!isCartOpen" (buy)="addToCart($event)" [cart]="cart"></app-item-list>
   </div>
 </div>
