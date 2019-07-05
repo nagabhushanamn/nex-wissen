@@ -1,0 +1,17 @@
+<div class="card">
+  <div class="card-header">
+    ActionBox : <span class="badge badge-danger" [innerHTML]="totalCount"></span>
+  </div>
+  <div class="card-body">
+   
+    <app-action *ngFor="let n of numbers" 
+                [value]="n" 
+                (boom)="incementTotalCount($event)">
+    </app-action>
+
+    <div style="clear: both;">
+      <app-summary [value]="totalCount"></app-summary>
+    </div>
+
+  </div>
+</div>

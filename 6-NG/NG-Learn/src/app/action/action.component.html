@@ -1,0 +1,10 @@
+<div class="action">
+  <div class="card card-body">
+    <button (click)="incementCount($event)" 
+            [ngClass]="{btn:true,'btn-success':value>0,'btn-danger':value<0}">
+      {{value}}
+    </button>
+    <hr />
+    <span class="badge badge-dark">{{count}}</span>
+  </div>
+</div>
