@@ -1,0 +1,69 @@
+<div class="row">
+  <div class="col-md-6">
+    <hr />
+    Form => model
+    <hr />
+    <pre>
+      {{userForm.value|json}}
+    </pre>
+
+    <hr />
+    Form => status
+    <hr />
+
+    <pre>
+      is pristine : {{userForm.pristine}}
+      is dirty    : {{userForm.dirty}}
+      is valid    : {{userForm.valid}}
+      is invalid  : {{userForm.invalid}}
+      is untouched: {{userForm.untouched}}
+      is touched  : {{userForm.touched}}
+    </pre>
+
+    <hr />
+    FormControl => status e.g lastName
+    <hr />
+
+    <pre>
+      is pristine : {{userForm.get('lastName').pristine}}
+      is dirty    : {{userForm.get('lastName').dirty}}
+      is valid    : {{userForm.get('lastName').valid}}
+      is invalid  : {{userForm.get('lastName').invalid}}
+      id untouched: {{userForm.get('lastName').untouched}}
+      id touched  : {{userForm.get('lastName').touched}}
+     
+    </pre>
+    <hr />
+    <button class="btn btn-info" (click)="loadUser($event)">Load User</button>
+    <hr />
+    <div class="card">
+      <div class="card-header">User Form</div>
+      <div class="card-body">
+        <form [formGroup]="userForm" (submit)="handleFormSubmit($event)">
+          <div class="form-group">
+            <label>First Name:</label>
+            <input (blur)="handleBlur(userForm.get('firstName'))" 
+                   autofocus class="form-control" 
+                   [class.is-invalid]="errors.firstName" 
+                   formControlName="firstName" />
+            <div class="text-danger">{{errors.firstName}}</div>
+          </div>
+          <div class="form-group">
+            <label>Last Name:</label>
+            <input class="form-control" formControlName="lastName" />
+          </div>
+          <div class="form-group">
+              <label>SSN:</label>
+              <input class="form-control" formControlName="ssn" />
+              <div class="text-danger">{{errors.ssn}}</div>
+          </div>
+          <div class="form-group">
+            <label>Email:</label>
+            <input type="email" class="form-control" formControlName="email" />
+          </div>
+          <button class="btn btn-dark">submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+
+
+How to manage form(s) with NG-framework?
+
+-----------------------------------------------
+basic step(s)
+-----------------------------------------------
+
+  - for every form tag in component template,
+    must bind 'FormGroup' object
+
+    -> FormGroup ==> group of form-control(s)
+    -> FormControl i.e any i field in form
+
+-----------------------------------------------
+
+    
+
+
+
