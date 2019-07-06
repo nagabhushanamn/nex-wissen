@@ -10,7 +10,7 @@ export class AppComponent {
   title = 'eat-IT-v1';
   cart = {}
   cartQty = 0;
-
+ 
   addToCart(event) {
     let { item } = event;
     let { id } = item;

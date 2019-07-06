@@ -1,0 +1,11 @@
+<div class="alert alert-info">
+  <span>
+    <i *ngFor="let n of stars" 
+           style="color: orange;" 
+           class="fa fa-star">
+    </i>
+  </span>
+  &mdash;<span>{{review.author}}</span>
+  <hr />
+  <div>{{review.body}}</div>
+</div>

@@ -1,0 +1,7 @@
+
+
+
+<div class="list-group-item" *ngFor="let item of items | slice:0:10">
+  <app-item [value]="item" (buy)="addToCart($event)" [cartQty]="cart[item.id]?.qty">
+  </app-item>
+</div>

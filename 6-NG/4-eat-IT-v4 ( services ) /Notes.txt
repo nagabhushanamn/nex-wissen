@@ -1,0 +1,37 @@
+
+
+
+
+
+Arch../design issues
+----------------------
+
+===> state/model/ui-data is scattered across UI components
+===> state & state-change logic & network/service calls 
+     are tightly-coupled with UI components
+===> if same state is required in multiple components 
+     either we should duplicate that state in components or we should pass via input properties 
+===> Unit-Testing is very difficult in components
+===> we cant re-use same components across diffent pages or application
+
+soln:
+
+   ==> isolate common state & state change logic 
+       & n/wing logic from UI components
+   
+ How ?
+
+   in NG , using NG service classes     
+
+
+   what is NG service ?
+
+   -> a object , holds common state / logic for multiple UI components
+
+
+   features of NG-services
+
+   --> by default all NG services are singleton 
+   --> thru DI , UI componentes can get service instances
+
+   

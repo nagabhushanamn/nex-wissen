@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { CartService } from '../cart.service';
 
 @Component({
   selector: 'app-item-list',
@@ -6,8 +7,8 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./item-list.component.css']
 })
 export class ItemListComponent implements OnInit {
- 
-  @Input() cart={};
+
+  cart = {};
   @Output() buy = new EventEmitter();
 
   addToCart(event) {
@@ -39,9 +40,14 @@ export class ItemListComponent implements OnInit {
 
   ]
 
-  constructor() { }
+  constructor(private cartService: CartService) { }
 
   ngOnInit() {
+    this.cart = this.cartService.getCart();
+    this.cartService.getCartStream()
+      .subscribe(e => {
+        this.cart = e.cart;
+      })
   }
 
 }
