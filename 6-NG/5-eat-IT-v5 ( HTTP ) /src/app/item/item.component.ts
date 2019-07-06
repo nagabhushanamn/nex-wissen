@@ -37,7 +37,10 @@ export class ItemComponent implements OnInit {
     event.preventDefault();
     this.currentTab = tabIndex;
     if (this.currentTab === 3) {
-      this.reviews = this.itemService.getReviews(this.item.id)
+      this.itemService.getReviews(this.item.id)
+        .subscribe((response: any) => {
+          this.reviews = response
+        })
     }
   }
 

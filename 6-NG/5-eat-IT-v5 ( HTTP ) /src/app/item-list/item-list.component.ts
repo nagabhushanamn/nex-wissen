@@ -10,12 +10,17 @@ import { ItemService } from '../item.service';
 export class ItemListComponent implements OnInit {
 
   cart = {};
-  items = []
+  items: Array<any> = []
 
   constructor(private cartService: CartService, private itemService: ItemService) { }
 
   ngOnInit() {
-    this.items = this.itemService.getItems();
+
+    this.itemService.getItems()
+      .subscribe((response: any) => {
+        this.items = response
+      })
+
     this.cart = this.cartService.getCart();
     this.cartService.getCartStream()
       .subscribe(e => {

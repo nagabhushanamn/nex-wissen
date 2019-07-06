@@ -1,0 +1,12 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "mongo": {
+    "url": "mongodb://user1:user123@ds237196.mlab.com:37196/eat-db",
+    "database": "eat-db",
+    "name": "mongo",
+    "connector": "mongodb"
+  }
+}
