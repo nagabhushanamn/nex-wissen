@@ -19,6 +19,12 @@ export class CartService {
   getCart() {
     return this.cart;
   }
+  loadCart() {
+    let cart = localStorage.getItem('user-cart') || '{}';
+    this.cart = JSON.parse(cart);
+    this.cartQty = Object.keys(this.cart).length;
+    this.publishToStream()
+  }
   addToCart(item, qty) {
     let { id } = item;
     let itemLine = this.cart[id];
@@ -30,6 +36,7 @@ export class CartService {
     this.cart = { ...this.cart, [id]: itemLine }
     if (itemLine.qty === 0)
       delete this.cart[id]
+    localStorage.setItem('user-cart', JSON.stringify(this.cart))
     this.publishToStream()
   }
 

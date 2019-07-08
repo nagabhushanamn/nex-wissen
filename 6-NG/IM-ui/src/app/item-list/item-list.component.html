@@ -2,10 +2,14 @@
   <div class="alert alert-warning" *ngIf="items.length===0">No Items</div>
   <table class="table table-sm table-bordered">
     <tr *ngFor="let item of items">
-      <td>{{item.name}}</td>
+      <td><a [routerLink]="['view',item.id]">{{item.name}}</a></td>
       <td>{{item.price|currency:item.currency}}</td>
       <td><a [routerLink]="['edit',item.id]">Edit</a></td>
     </tr>
   </table>
-  <router-outlet></router-outlet>
+  <div class="row">
+    <div class="col-sm-6 col-md-6">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
 </div>

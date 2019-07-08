@@ -8,6 +8,9 @@ import { ItemFormComponent } from './item-form/item-form.component';
 import { AuthAndRoleService } from './auth-and-role.service';
 import { LoginComponent } from './login/login.component';
 import { FormStatusCheckService } from './form-status-check.service';
+import { EditGuardService } from './edit-guard.service';
+import { ItemViewComponent } from './item-view/item-view.component';
+import { ItemResolverService } from './item-resolver.service';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -25,10 +28,18 @@ const routes: Routes = [
       items: ItemsResolverService,
       foo: FooResolverService
     },
+    canActivateChild: [EditGuardService],
     children: [
       {
         path: 'edit/:itemId',
-        component: ItemFormComponent
+        component: ItemFormComponent,
+      },
+      {
+        path: 'view/:itemId',
+        component: ItemViewComponent,
+        resolve: {
+          item: ItemResolverService
+        }
       },
     ]
     // data: {
