@@ -3,7 +3,9 @@
     <img [src]="item.imgPath" class="img-fluid" />
   </div>
   <div class="col-9 col-sm-9 col-md-9 col-lg-9">
-    <h5>{{item.name|uppercase}} - <!--<small>{{item.date|date:'hh:MM'}}</small>--></h5>
+    <h5>{{item.name|uppercase}} -
+      <!--<small>{{item.date|date:'hh:MM'}}</small>-->
+    </h5>
     <h6>{{item.price|priceDiscount:item.discount|currency:item.currency:'symbol'}}</h6>
     <button (click)="handleBuy($event)" *ngIf="item.canBuy" class="btn btn-sm btn-dark">buy</button>
     &nbsp;<input size="2" readonly [value]="cartQty" />
@@ -25,10 +27,12 @@
     <div *ngIf="isTabSelected(1)">{{item.description | slice:0:1000}}</div>
     <div *ngIf="isTabSelected(2)">Not Yet</div>
     <div *ngIf="isTabSelected(3)">
+      <div *ngIf="reviews.length===0"> No Reviews </div>
       <div *ngFor="let review of reviews">
         <app-review [value]="review">
         </app-review>
       </div>
+      <app-review-form [itemId]="item.id" (onSubmit)="handleNewReview($event)"></app-review-form>
     </div>
   </div>
 </div>

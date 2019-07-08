@@ -1,0 +1,20 @@
+<div class="">
+  <hr />
+  Level-1 : Q <span class="badge badge-warning">1/20</span>
+  <hr />
+  <div class="" style="width: 38rem;">
+    <div class="">
+      <h6> {{currentQuestion.title}}</h6>
+    </div>
+  </div>
+  <hr />
+  <ul style="list-style: none">
+    <li *ngFor="let option of currentQuestion.options">
+      <input type="checkbox" />&nbsp;{{option}}</li>
+  </ul>
+  <hr />
+  <div class="row">
+    <button (click)="next()" class="btn btn-sm btn-dark pull-right">Next</button>
+  </div>
+
+</div>

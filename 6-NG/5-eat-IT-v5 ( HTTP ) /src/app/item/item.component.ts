@@ -43,5 +43,8 @@ export class ItemComponent implements OnInit {
         })
     }
   }
+  handleNewReview(event) {
+    this.reviews.push(event);
+  }
 
 }

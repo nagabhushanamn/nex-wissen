@@ -18,7 +18,7 @@ export class ItemService {
     return this._http.get(apiUrl) // async
   }
   postReview(itemId, review) {
-    let apiUrl = `http://localhost:8181/api/products/${id}/reviews`;
+    let apiUrl = `http://localhost:8181/api/products/${itemId}/reviews`;
     return this._http.post(apiUrl, review) // async
   }
 

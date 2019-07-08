@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http'
+import { ReactiveFormsModule } from '@angular/forms'
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -13,6 +14,7 @@ import { PriceDiscountPipe } from './price-discount.pipe';
 import { ItemListComponent } from './item-list/item-list.component';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { ReviewFormComponent } from './review-form/review-form.component';
 
 
 var routes: Routes = [
@@ -33,10 +35,12 @@ var routes: Routes = [
     PriceDiscountPipe,
     ItemListComponent,
     HomeComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    ReviewFormComponent
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     HttpClientModule,
     RouterModule.forRoot(routes)
   ],

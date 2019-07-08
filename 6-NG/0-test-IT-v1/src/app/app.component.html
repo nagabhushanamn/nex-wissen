@@ -1,19 +1,13 @@
-<div class="container">
+<div>
+
+    <app-navbar></app-navbar>
+
     <hr />
-    <h1>{{title}}</h1> {{bla}}
+    <app-nav></app-nav>
     <hr />
 
-    <div>
-        <hr />
-        <h5>{{question.title}}</h5>
-        <hr />
-        <ul class="">
-            <li class="" *ngFor="let option of question.options">
-                <input type="checkbox" />&nbsp;{{option}}
-            </li>
-        </ul>
-        <button *ngIf="!isAnswered" class="btn btn-sm btn-info">Next</button>
+    <div class="container">
+        <router-outlet></router-outlet>
     </div>
-
 
 </div>
