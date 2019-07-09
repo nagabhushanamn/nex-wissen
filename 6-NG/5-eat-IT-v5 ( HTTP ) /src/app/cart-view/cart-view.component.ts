@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { CartService } from '../cart.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cart-view',
@@ -11,7 +12,7 @@ export class CartViewComponent implements OnInit {
   cart = {};
   cartItems = [];
 
-  constructor(private cartService: CartService) { }
+  constructor(private cartService: CartService,private router:Router) { }
 
   ngOnInit() {
     this.cart = this.cartService.getCart();
@@ -31,7 +32,13 @@ export class CartViewComponent implements OnInit {
   }
 
   incOrDecQty(item, qty) {
-    this.cartService.addToCart(item, qty);
+    this.cartService.addToCart(item, qty)
+  }
+  doCheckout() {
+    this.cartService.doCheckout()
+      .subscribe(e => {
+        this.router.navigate(['orders'])
+      })
   }
 
 }

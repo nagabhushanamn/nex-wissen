@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { Subject, pipe } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+import { map } from 'rxjs/operators'
 
 @Injectable({
   providedIn: 'root'
@@ -51,6 +52,16 @@ export class CartService {
         this.publishToStream()
       })
   }
+  doCheckout() {
+    let api = "http://localhost:8083/api/v1/users/Nag/orders";
+    return this.http.post(api, {})
+      .pipe(map(e => {
+        this.cart = {}
+        this.cartQty = 0;
+        return e;
+      }))
+  }
+
 
   publishToStream() {
     this.cartQty = Object.keys(this.cart).length;

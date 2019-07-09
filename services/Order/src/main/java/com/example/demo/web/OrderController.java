@@ -37,7 +37,7 @@ public class OrderController {
 	public ResponseEntity<?> newOrder(@PathVariable String user) {
 
 	
-		String url = "http://localhost:8082/api/users/Nag/cart";
+		String url = "http://localhost:8082/api/v1/users/Nag/cart";
 		ResponseEntity<ItemLine[]> responseEntity = restTemplate.getForEntity(url, ItemLine[].class);
 		ItemLine[] itemLines = responseEntity.getBody();
 

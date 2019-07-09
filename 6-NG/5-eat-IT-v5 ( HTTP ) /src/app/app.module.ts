@@ -16,12 +16,14 @@ import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ReviewFormComponent } from './review-form/review-form.component';
 import { HoverDirective } from './hover.directive';
+import { OrderViewComponent } from './order-view/order-view.component';
 
 
 var routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'items', component: ItemListComponent },
   { path: 'cart', component: CartViewComponent },
+  { path: 'orders', component: OrderViewComponent },
   { path: '**', component: NotFoundComponent },
 ]
 
@@ -38,7 +40,8 @@ var routes: Routes = [
     HomeComponent,
     NotFoundComponent,
     ReviewFormComponent,
-    HoverDirective
+    HoverDirective,
+    OrderViewComponent
   ],
   imports: [
     BrowserModule,
