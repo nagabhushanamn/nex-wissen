@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -8,10 +9,9 @@ export class CartService {
 
   cart = {}
   cartQty = 0;
-
   cartStream: Subject<any> = new Subject();
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   getCartStream() {
     return this.cartStream;
@@ -20,9 +20,17 @@ export class CartService {
     return this.cart;
   }
   loadCart() {
-    let cart = localStorage.getItem('user-cart') || '{}';
-    this.cart = JSON.parse(cart);
-    this.cartQty = Object.keys(this.cart).length;
+    //let cart = localStorage.getItem('user-cart') || '{}';
+    //this.cart = JSON.parse(cart);
+    //this.cartQty = Object.keys(this.cart).length;
+    let api = "http://localhost:8082/api/v1/users/Nag/cart";
+    this.http.get(api)
+      .subscribe((e: any) => {
+        e.forEach(element => {
+          this.cart[element.item.id] = { item: element.item, qty: element.qty }
+        });
+        this.cartQty = Object.keys(this.cart).length;
+      })
     this.publishToStream()
   }
   addToCart(item, qty) {
@@ -36,8 +44,12 @@ export class CartService {
     this.cart = { ...this.cart, [id]: itemLine }
     if (itemLine.qty === 0)
       delete this.cart[id]
-    localStorage.setItem('user-cart', JSON.stringify(this.cart))
-    this.publishToStream()
+    // localStorage.setItem('user-cart', JSON.stringify(this.cart))
+    let api = "http://localhost:8082/api/v1/users/Nag/cart";
+    this.http.post(api, itemLine)
+      .subscribe(e => {
+        this.publishToStream()
+      })
   }
 
   publishToStream() {

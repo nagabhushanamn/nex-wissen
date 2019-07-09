@@ -1,0 +1,17 @@
+<div class="jumbotron">
+
+    <h4 #header>Todos</h4>
+
+    <hr />
+    <ng-content></ng-content>
+    <hr />
+
+    <ul class="list-group">
+        <li class="list-group-item">
+            <app-todo *ngIf="todo" [value]="todo"></app-todo>
+        </li>
+    </ul>
+
+
+
+</div>

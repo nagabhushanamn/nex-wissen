@@ -15,6 +15,7 @@ import { ItemListComponent } from './item-list/item-list.component';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ReviewFormComponent } from './review-form/review-form.component';
+import { HoverDirective } from './hover.directive';
 
 
 var routes: Routes = [
@@ -36,7 +37,8 @@ var routes: Routes = [
     ItemListComponent,
     HomeComponent,
     NotFoundComponent,
-    ReviewFormComponent
+    ReviewFormComponent,
+    HoverDirective
   ],
   imports: [
     BrowserModule,

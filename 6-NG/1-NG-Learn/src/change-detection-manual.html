@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>learn</title>
+</head>
+
+<body>
+    <hr />
+    (learn.html)
+    <hr />
+
+    <button id="start-btn">start</button>
+
+    <span id="progress">0</span>
+
+    <script>
+        let startBtn = document.getElementById('start-btn')
+        let i = 0
+        function progress() {
+            let prevValue = i;
+            i++;  // event..
+            if (i !== prevValue) // change detection
+                document.getElementById('progress').innerHTML = i; // DOM manipulation
+           
+            if (i !== 100) {
+                setTimeout(() => {
+                    progress()
+                }, 100)
+            }
+        }
+
+        startBtn.addEventListener('click', e => {
+            i = 0;
+            progress();
+        })
+    </script>
+
+</body>
+
+</html>

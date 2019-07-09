@@ -14,7 +14,13 @@ basic step(s)
 
 -----------------------------------------------
 
-    
 
+NG change detection   ( How Angular working behind scenes? )
+https://blog.thoughtram.io/angular/2016/02/22/angular-2-change-detection-explained.html
+
+
+
+
+https://codecraft.tv/courses/angular/custom-directives/creating-a-custom-directive/
 
 

@@ -31,7 +31,7 @@
       is invalid  : {{userForm.get('lastName').invalid}}
       id untouched: {{userForm.get('lastName').untouched}}
       id touched  : {{userForm.get('lastName').touched}}
-     
+      
     </pre>
     <hr />
     <button class="btn btn-info" (click)="loadUser($event)">Load User</button>
@@ -41,11 +41,59 @@
       <div class="card-body">
         <form [formGroup]="userForm" (submit)="handleFormSubmit($event)">
           <div class="form-group">
+            <label>Search:</label>
+            <input type="text" class="form-control" formControlName="search" />
+          </div>
+          <div formGroupName="dateGroup">
+            <div class="form-group">
+              <label>FromDate:</label>
+              <input type="text" class="form-control" formControlName="fromDate" />
+            </div>
+            <div class="form-group">
+              <label>ToDate:</label>
+              <input type="text" class="form-control" formControlName="toDate" />
+            </div>
+            <div *ngIf="userForm.get('dateGroup').errors?.range && userForm.get('dateGroup.toDate').touched">
+              Invalid dates
+            </div>
+          </div>
+          <pre>
+            <hr/>
+            errors
+            <hr/>
+            {{userForm.get('dateGroup').errors|json}}
+          </pre>
+
+          <div class="form-group">
+            <label>Notification</label>
+            <div class="input-group">
+              <input (change)="handleNotiChange('email')" type="radio" value="email" formControlName="notification"
+                checked />&nbsp;Email
+              &nbsp;&nbsp;
+              <input (change)="handleNotiChange('sms')" type="radio" value="sms"
+                formControlName="notification" />&nbsp;SMS
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Email:</label>
+            <input type="email" class="form-control" formControlName="email" />
+          </div>
+          <div class="form-group">
+            <label>Mobile:</label>
+            <input class="form-control" formControlName="mobile" />
+            <div *ngIf="userForm.get('mobile').touched && userForm.get('mobile').errors?.required">
+              please provide mobile number
+            </div>
+            <div *ngIf="userForm.get('mobile').touched && userForm.get('mobile').errors?.minlength">
+              Invalid Mobile number
+            </div>
+          </div>
+
+          <div class="form-group">
             <label>First Name:</label>
-            <input (blur)="handleBlur(userForm.get('firstName'))" 
-                   autofocus class="form-control" 
-                   [class.is-invalid]="errors.firstName" 
-                   formControlName="firstName" />
+            <input (blur)="handleBlur(userForm.get('firstName'))" class="form-control"
+              [class.is-invalid]="errors.firstName" formControlName="firstName" />
             <div class="text-danger">{{errors.firstName}}</div>
           </div>
           <div class="form-group">
@@ -53,13 +101,9 @@
             <input class="form-control" formControlName="lastName" />
           </div>
           <div class="form-group">
-              <label>SSN:</label>
-              <input class="form-control" formControlName="ssn" />
-              <div class="text-danger">{{errors.ssn}}</div>
-          </div>
-          <div class="form-group">
-            <label>Email:</label>
-            <input type="email" class="form-control" formControlName="email" />
+            <label>SSN:</label>
+            <input class="form-control" formControlName="ssn" />
+            <div class="text-danger">{{errors.ssn}}</div>
           </div>
           <button class="btn btn-dark">submit</button>
         </form>

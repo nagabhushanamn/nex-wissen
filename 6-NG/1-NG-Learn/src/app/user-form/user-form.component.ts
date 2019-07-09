@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
-import { ssn } from '../validators';
+import { ssn, dateRangeValidator } from '../validators';
+import { debounceTime, map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-user-form',
@@ -22,16 +23,31 @@ export class UserFormComponent implements OnInit {
     // });
     // or
     this.userForm = this.fb.group({
+      search: [''],
+      dateGroup: this.fb.group({
+        fromDate: [''],
+        toDate: [''],
+      }, { validators: dateRangeValidator }),
+      notification: 'email',
+      email: ['', [Validators.required, Validators.email]],
+      mobile: [''],
       firstName: ['', [Validators.required, Validators.minLength(3)]],
       lastName: '',
       ssn: ['', [Validators.required, ssn]],
-      email: ['', [Validators.required, Validators.email]]
     })
 
     let firstNameControl = this.userForm.get('firstName');
     firstNameControl.valueChanges
       .subscribe(e => {
         // console.log(e)
+      })
+
+    let searchControl = this.userForm.get('search')
+    searchControl.valueChanges // stream-1
+      .pipe(debounceTime(2000)) // stream-2
+      .pipe(map(e=>e.toUpperCase())) // stream-3
+      .subscribe(e => {
+        console.log(e)
       })
 
     firstNameControl.statusChanges
@@ -54,6 +70,15 @@ export class UserFormComponent implements OnInit {
       })
 
 
+  }
+  handleNotiChange(noti) {
+    let mobileControl = this.userForm.get('mobile');
+    if (noti === "sms") {
+      mobileControl.setValidators([Validators.required, Validators.minLength(10)])
+    } else {
+      mobileControl.clearValidators()
+    }
+    mobileControl.updateValueAndValidity();
   }
   handleBlur(control) {
     control.setValue(control.value)

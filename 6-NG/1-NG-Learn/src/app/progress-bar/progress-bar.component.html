@@ -1,0 +1,16 @@
+<div class="card">
+  <div class="card-body">
+    <button class="btn btn-success" (click)="processWithinAngularZone()">
+      start progress (in Zone )
+    </button> &mdash;
+    <span class="badge badge-dark">{{progress1}}</span>
+  </div>
+</div>
+<div class="card">
+    <div class="card-body">
+      <button class="btn btn-danger" (click)="processOutsideAngularZone()">
+        start progress (outside Zone )
+      </button> &mdash;
+      <span class="badge badge-dark">{{progress2}}</span>
+    </div>
+  </div>

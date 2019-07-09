@@ -16,6 +16,7 @@ public class Item {
 	private String imgPath;
 	private boolean canBuy;
 	private String description;
+	
 
 	public String getId() {
 		return id;
