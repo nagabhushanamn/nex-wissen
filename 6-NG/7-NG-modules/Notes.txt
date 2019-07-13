@@ -1,0 +1,23 @@
+
+
+NG module
+-------------------
+
+ - diectives  ==> UI
+    a. component
+    b. structural
+    c. attribute
+ - pipes      ==> tranformation 
+ - services   ==> non-ui logic
+
+ ---------------------------------------
+
+e.g modules
+
+ Administration-ui
+ Customer-ui  
+ 
+ 
+
+
+   

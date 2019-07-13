@@ -1,3 +1,4 @@
+
 drop database items_db;
 create database items_db;
 use items_db;

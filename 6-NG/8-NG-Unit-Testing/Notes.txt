@@ -1,0 +1,46 @@
+
+
+
+Benefits of Unit Testing
+--------------------------------
+
+    - Improve the design of implementations. 
+    - Allows refactoring
+    - Add new features without breaking anything.
+    +
+    - Tests are good documentation.
+    - Tests make developers more confident about their work.
+
+
+---------------------------------------
+
+How to do Unit Testing ?
+
+
+   i.e Unit-Testing ==> AAA
+
+        A ==> Arange
+        A ==> Act
+        A ==> Assert
+
+    ----------------------------------------------------
+
+        ==> to write test-cases & run & generate reports
+
+    Unit-Testing F.Ws
+
+     e.g for javascript-language
+
+            - Jasmine
+            - Mocha
+            - Jest
+            - Ava
+            ....   
+
+    Test Runner
+    
+            - Karma
+
+    ------------------------------------------------------        
+
+
