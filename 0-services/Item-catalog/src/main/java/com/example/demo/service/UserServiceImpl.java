@@ -23,9 +23,11 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public void save(User user) {
+		User existingUser = userRepository.findByUsername(user.getUsername());
+		if (existingUser != null)
+			throw new RuntimeException("Username Already Exist");
 		user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
 		Set<Role> roles = new HashSet<>(roleRepository.findAll());
-		roles.add(new Role("ROLE_ADMIN"));
 		user.setRoles(roles);
 		userRepository.save(user);
 	}

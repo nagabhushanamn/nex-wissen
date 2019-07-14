@@ -1,0 +1,31 @@
+<div class="alert alert-warning" *ngIf="cartItems.length===0">cart is empty</div>
+<div class="card" *ngIf="cartItems.length!==0">
+  <div class="card-header">Item(s) in cart</div>
+  <div class="card-body">
+    <table class="table table-sm table-bordered">
+      <thead>
+        <tr>
+          <!-- <th>Id</th> -->
+          <th>Name</th>
+          <th>Price</th>
+          <th>Qty</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of cartItems">
+          <!-- <td>{{item.id}}</td> -->
+          <td>{{item.name}}</td>
+          <td>{{item.price|currency:item.currency}}</td>
+          <td>
+            <span (click)="incOrDecQty(item,-1)" class="badge badge-dark"><i class="fa fa-minus"></i></span>
+            &nbsp;{{cart[item.id].qty}}&nbsp;
+            <span (click)="incOrDecQty(item,1)" class="badge badge-dark"><i class="fa fa-plus"></i></span>
+          </td>
+          <td>{{item.price*cart[item.id].qty|currency:item.currency}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="btn btn-dark" (click)="doCheckout()">checkout</button>
+  </div>
+</div>

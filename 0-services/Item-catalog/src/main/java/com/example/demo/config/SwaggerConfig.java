@@ -20,7 +20,6 @@ public class SwaggerConfig {
 	      .apis(RequestHandlerSelectors.basePackage("com.example.demo.web"))
 	      .build();
 	}
-	 
 	
 
 }

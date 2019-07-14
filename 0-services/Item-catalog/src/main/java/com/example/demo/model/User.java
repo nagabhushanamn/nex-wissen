@@ -7,7 +7,8 @@ import java.util.Set;
 @Entity
 @Table(name = "user")
 public class User {
-    @Id
+   
+	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 

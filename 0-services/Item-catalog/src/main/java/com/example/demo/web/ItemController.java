@@ -1,10 +1,14 @@
 package com.example.demo.web;
 
+import java.security.Principal;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContext;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -30,11 +34,11 @@ public class ItemController {
 	private ReviewRepository reviewRepository;
 
 	@GetMapping
-	public List<Item> getAll() {
+	public List<Item> getAll(Principal principal) {
 		return itemRepository.findAll();
 	}
-	@GetMapping(value="/{itemId}/reviews")
-	public List<Review> getAllItemReviews(@PathVariable String itemId) {
+	@GetMapping(value="/{item_id}/reviews")
+	public List<Review> getAllItemReviews(@PathVariable(name="item_id") String itemId) {
 		return reviewRepository.findAll(itemId);
 	}
 	@PostMapping(value="/{itemId}/reviews")
